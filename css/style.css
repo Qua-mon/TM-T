@@ -1,0 +1,87 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+    font-family: Arial;
+}
+.header-content{
+    padding: 20px;
+}
+.logo img{
+    max-width: 100px;
+}
+.box-search {
+    padding: 20px 0px;
+}
+
+.card-header {
+    float: left;
+    margin-top: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    background: transparent;
+    border: none;
+    margin-left: 50px;
+}
+
+.user-login {
+    float: left;
+    margin-top: 28px;
+    margin-left: 60px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+a.nav-link.cart-item-count {
+    color: #7e7e7e;
+    font-size: 25px;
+}
+
+a.dropdown-toggle {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+.dropdown-menu li{
+    padding: 5px;
+}
+.dropdown-menu li:hover{
+    background-color: #cecece;
+}
+.dropdown-menu a{
+    text-decoration: none;
+    color: #000;
+    padding-left: 10px;
+}
+.card-header-top-box {
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    position: absolute;
+    width: 300px;
+    box-shadow: 0 0 10px #000000;
+    transform: translate(0px, 20px);
+    transition: opacity 0.5s ease-in-out 0s;
+    z-index: 1000;
+    right: -1px;
+    opacity: 0;
+    visibility: hidden;
+}
+.cart-empty{
+    padding: 10px;
+}
+.card-header-top-box::before{
+    border-style: solid;
+    border-color: transparent transparent rgb(0, 0, 0);
+    border-width: 8px;
+    position: absolute;
+    content: "";
+    right: 38px;
+    top: -17px;
+}
+.card-header-top-box.show{
+    opacity: 1;
+    visibility: visible;
+}
