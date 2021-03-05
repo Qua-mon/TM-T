@@ -122,3 +122,10 @@ a.dropdown-toggle {
 nav ul.dropdown-menu{
     margin-left: 80px;
 }
+.t {
+    color: rgb(22, 22, 22) !important;
+    padding-left: 140px !important;
+}
+.c{
+    margin-left: 80px;
+}
