@@ -128,8 +128,17 @@ nav ul.dropdown-menu{
 }
 .c{
     margin-left: 80px;
+<<<<<<< HEAD
     margin: 0;
 }
 .te{
     margin: 0;
+=======
+}
+.c{
+    margin-left: 80px;
+}
+.dd{
+    margin-left: 80px;
+>>>>>>> 85b132c750fcb6bc97ae4279a0d8d06e5ecd6319
 }
