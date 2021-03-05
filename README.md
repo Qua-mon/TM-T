@@ -19,4 +19,5 @@ git fetch --all ,  git reset --hard origin/master: Update code nhưng reset lạ
 git merge --abort: Xóa dữ liệu vừa update nếu bị xung đột
 
 git pull --rebase origin "Tên branch" (main): Fix lỗi push ko đc
+
 git push origin "Tên branch" (main): pust trực tiếp từ code 
