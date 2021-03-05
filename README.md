@@ -14,7 +14,7 @@ Ctrl + Shift + P >Git: Clone
 git pull origin main: Tự động Update code, file từ github về
 
 
-git fetch --all ,  git reset --hard origin/master: Update code nhưng reset code từ github về ---> Mất hiện tại đang làm
+git fetch --all ,  git reset --hard origin/master: Update code nhưng reset lại như hiện trạng code đc push trên gibhub ---> Đang code mà dùng cái này thì mất hết, làm lại từ đầu
 
 git merge --abort: Xóa dữ liệu vừa update nếu bị xung đột
 
