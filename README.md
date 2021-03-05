@@ -1,6 +1,6 @@
 # TMDT
 
-Link: https://github.com/KhoaAnh4920/Khoa
+Link: https://github.com/Qua-mon/TMDT.git
 
 cd C:\Program Files\Git\bin
 
