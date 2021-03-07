@@ -6,20 +6,18 @@ body{
 	width: 100%;
 	height: 100%;
     font-family: Arial;
+    padding-top: 148px;
 }
 .header-content{
     padding: 10px;
     height: 90px;
 }
-.logo img{
-    width: 80px;
-    height: 80px;
-}
+
 .box-search {
     padding: 20px 0px;
 }
 
-.card-header {
+.header .card-header {
     float: left;
     margin-top: 2px;
     position: relative;
@@ -41,7 +39,15 @@ a.nav-link.cart-item-count {
     color: #7e7e7e;
     font-size: 25px;
 }
-
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fafafa;
+}
 a.dropdown-toggle {
     font-size: 20px;
     color: black;
@@ -50,9 +56,12 @@ a.dropdown-toggle {
 .dropdown-menu li{
     padding: 5px;
 }
-.dropdown-menu li:hover{
+.dropdown-menu li:hover{  /* Hover menu con */
     background-color: #cecece;
 }
+.navigation-menu .dropdown:hover> .dropdown-menu { /*Hover menu*/
+    display: block;
+  }  
 .dropdown-menu a{
     text-decoration: none;
     color: #000;
@@ -66,11 +75,14 @@ a.dropdown-toggle {
     box-shadow: 0 0 10px #000000;
     transform: translate(0px, 20px);
     transition: opacity 0.5s ease-in-out 0s;
-    z-index: 99999;
+    z-index: 9999;
     right: -1px;
     opacity: 0;
     visibility: hidden;
     top: 50px;
+}
+ul.dropdown-menu.show {
+    z-index: 9999;
 }
 .cart-empty{
     padding: 10px;
@@ -115,10 +127,169 @@ a.dropdown-toggle {
 		display: block;
 	}
 }
+@media (min-width: 1200px){
+    .card img{
+        margin-left: 50px;
+    }
+}
+/*Định dạng hambuger*/
+@media (min-width:967px) { 
+    .hamburger.hamburger--emphatic{
+    display: none;
+    }
+  }
 .nav-item a.nav-link {
     color: rgb(22, 22, 22) !important;
     padding-left: 140px !important;
 }
 nav ul.dropdown-menu{
     margin-left: 80px;
+}
+
+.san-pham-noi-bat, .hang-khuyen-mai, .sap-ve-hang{
+    width: 100%;
+    height: 33%;
+    margin-top: 50px;
+    left: 15px;
+    right: 15px;
+}
+/* .title {
+    background-color: #e7e1e1;
+    padding: 12px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px grey;
+} */
+.test{
+    background-color: transparent;
+    padding: 12px;
+}
+.gach-ngang{
+    border-top: 1px solid #d0d0d0;
+    position: relative;
+}
+.title a{
+    left: 44%;
+    position: absolute;
+    top: -25px;
+    display: block;
+    background-image: linear-gradient(to right top,#fae939,#ffca1c,#ffab0b,#ff8a12,#fc6721);
+    padding: 10px 10px;
+    border-radius: 50px;
+    color: #fafafa;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+a.xem-tat-ca {
+    color: #000;
+    text-decoration: none;
+    float: right;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 10px;;
+}
+.ten-title{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.card-body{
+    padding: 10px;
+}
+.card{
+    max-width: 300px;
+    margin-top: 30px;
+    margin-left: 10px;
+    box-shadow: 0px 2px 5px grey;
+}
+.card .card-header{
+    padding: 0px;
+    background: transparent;
+}
+.card img:hover{
+    cursor: pointer;
+}
+.card-header .pop-up{
+    z-index: 2;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 31%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: blue;
+}
+.pop-up.show-pop-up{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.6s;
+}
+.page_control{
+    display: flex;
+    margin-top: 20px;
+    left: 50%;
+    margin-left: 45%;
+}
+.page_control li{
+    padding-left: 20px;
+    list-style: none;
+}
+.page_control li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+div.pagination.pagination-centered.pagination-large{
+    margin-top: 20px;
+}
+
+/*Footer*/
+.footer{
+    background-color: #263238;
+    padding-top: 50px;
+    color: #fafafa;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+.footer-title {
+    padding: 5px;
+    display: block; 
+    border-bottom: 1px solid #fff;
+}
+
+.footer p {
+    margin-top: 25px;
+}
+ul.footer_HTKH {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.footer li {
+    padding-top: 10px;
+}
+
+ul.footer_HTKH li a {
+    color: #fafafa;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.social_footer{
+    display: block;
+    list-style: none;
+    left: 47%;
+    margin-left: 40%;
+    margin-top: 20px;
+    color: #fafafa;
+}
+.social_footer li{
+    padding: 30px;
+    display: inline;
+}
+.fab.fa-instagram:hover,.fa-twitter:hover,.fa-facebook-f:hover {
+    color: rgb(105, 105, 248);
+}
+.social_footer li a{
+    font-size: 30px;
+}
+.fab.fa-instagram,.fa-twitter,.fa-facebook-f{
+    color: #fafafa;
 }

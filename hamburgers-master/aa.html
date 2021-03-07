@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="dist/hamburgers.css">
+<style type="text/css">
+	@media (min-width: 600px) {
+		button{
+			display: none;
+		}
+	}
+	@media screen and (min-width:768px) {
+  .hamburger.hamburger--emphatic{
+  display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+  <nav id="mainNav" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-branch" href="index.html">
+			<img src="img/logo.png">
+		</a>
+		<button class="hamburger hamburger--emphatic" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+			<span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#services">Services</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#portfolio">Portfolio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#pricing">Pricing</a>
+				</li>
+        <li class="nav-item">
+          <a class="nav-link" href="SanPham.html">Products</a>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact</a>
+				</li>
+        <li class="nav-item">
+          <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span class="fa fa-shopping-cart"></span></a>
+        </li>
+			</ul>
+
+			<div class="input-group col-md-4">
+      			<div class="container-fluid">
+       				 <div class="searchbar">
+          				<input class="search_input" type="text" name="" placeholder="Search...">
+          				<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        			</div>
+      			</div>
+   	 </div>
+		</div>
+
+</div>
+</nav>
+
+		<script>
+  /**
+   * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+   *
+   * @private
+   * @author Todd Motto
+   * @link https://github.com/toddmotto/foreach
+   * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+   * @callback requestCallback      callback   - Callback function for each iteration.
+   * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+   * @returns {}
+   */
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }
+  </script>
+</body>
+</html>
