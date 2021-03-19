@@ -88,4 +88,85 @@ $(document).ready(function () {
     $(this).find('.pop-up').removeClass('show-pop-up');
   });
 });
+//showform
+$(document).ready(function(){
+  $(".DK").click(function(){
+    $('.formDK').addClass('show-form');
+    $('.nenMo').addClass('hienMo');
+    $('body').addClass('blockScroll');
+    
+  });
+  $('.close').click(function(){
+    $('.formDK').removeClass('show-form');
+    $('.nenMo').removeClass('hienMo');
+    $('body').removeClass('blockScroll');
+    
+
+  });
+});
+$(document).ready(function(){
+  $(".DN").click(function(){
+    $('.formDN').addClass('show-form');
+    $('.nenMo').addClass('hienMo');
+    $('body').addClass('blockScroll');
+    
+  });
+  $('.close').click(function(){
+    $('.formDN').removeClass('show-form');
+    $('.nenMo').removeClass('hienMo');
+    $('body').removeClass('blockScroll');
+  });
+});
+$(document).ready(function()
+{
+  $('.doiForm').click(function(){
+    $('.formDK').removeClass('show-form');
+    $('.formDN').addClass('show-form');
+  });
+  
+});
+$(document).ready(function(){
+  $('.doiForm1').click(function(){
+    $('.formDN').removeClass('show-form');
+    $('.formDK').addClass('show-form');
+  });
+});
+//kiemtraForm
+function validateForm(){
+
+    var u=document.getElementById("Fname").value;
+    var p=document.getElementById("Lname").value;
+    var q=document.getElementById("email").value;
+    var m=document.getElementById("phone").value;
+    var n=document.getElementById("pass").value;
+    if(u!=" " && p!="" && q!="" && m!="" && n!="")
+    {
+      alert("success");
+      return true;
+    }
+    
+    alert("khong dc de trong!!");
+    return false;
+      
+    
+}
+function validateFormDN(){
+
+  
+  var q=document.getElementById("email1").value;
+  var n=document.getElementById("pass1").value;
+  if( q!="" &&  n!="")
+  {
+    alert("success");
+    return true;
+  }alert("khong dc de trong!!");
+  return false;
+    
+  
+}
+
+
+
+
+
 
