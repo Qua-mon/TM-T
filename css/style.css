@@ -6,11 +6,11 @@ body{
 	width: 100%;
 	height: 100%;
     font-family: Arial;
-    padding-top: 148px;
+   
+    
 }
 .header-content{
     padding: 10px;
-    height: 90px;
 }
 
 .box-search {
@@ -40,7 +40,6 @@ a.nav-link.cart-item-count {
     font-size: 25px;
 }
 .header{
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -68,10 +67,8 @@ a.dropdown-toggle {
     padding-left: 10px;
 }
 .card-header-top-box {
-    /* opacity: 0; */
-    /* visibility: hidden; */
     position: absolute;
-    width: 300px;
+    width: 330px;
     box-shadow: 0 0 10px #000000;
     transform: translate(0px, 20px);
     transition: opacity 0.5s ease-in-out 0s;
@@ -101,6 +98,86 @@ ul.dropdown-menu.show {
     visibility: visible;
     background-color: rgb(255, 255, 255);
 }
+@media(max-width:350px){
+    .title a{
+        left: 25%;
+    }
+    .page_control{
+        margin-left: 25%;
+    }
+    .social_footer{
+        margin-left: 10%;
+    }
+    .pageXemAll{
+        position: absolute; 
+        left: 25%;
+    }
+}
+@media only screen and (max-width: 580px) and (min-width: 351px){
+    .title a{
+        left: 28%;
+    }
+    .page_control{
+        margin-left: 28%;
+    }
+    .social_footer{
+        margin-left: 20%;
+    }
+    .pageXemAll{
+        position: absolute; 
+        left: 28%;
+    }
+  }
+  @media only screen and (max-width: 800px) and (min-width: 600px){
+    .title a{
+        left: 40%;
+    }
+    .page_control{
+        margin-left: 40%;
+    }
+    .social_footer{
+        margin-left: 30%;
+    }
+    .pageXemAll{
+        position: absolute; 
+        left: 40%;
+    }
+}
+@media (max-width: 800px){
+    .user-login {
+        position: absolute;
+        right: 140px;
+    }
+    .header .card-header {
+        float: right;
+    }
+    
+}
+@media(min-width:800px){
+    /* Thêm css sticky */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+    .sticky + .all{
+        padding-top: 150px;
+      }
+    .title a{
+        left: 44%;
+    }
+    .page_control{
+        margin-left: 44%;
+    }
+    .social_footer{
+        margin-left: 40%;
+    }
+    .pageXemAll{
+        position: absolute; 
+        left: 44%;
+    }
+}
+
 @media (min-width: 992px){
 	.dropdown-menu .dropdown-toggle:after{
 		border-top: .3em solid transparent;
@@ -127,11 +204,6 @@ ul.dropdown-menu.show {
 		display: block;
 	}
 }
-@media (min-width: 1200px){
-    .card img{
-        margin-left: 50px;
-    }
-}
 /*Định dạng hambuger*/
 @media (min-width:967px) { 
     .hamburger.hamburger--emphatic{
@@ -153,22 +225,12 @@ nav ul.dropdown-menu{
     left: 15px;
     right: 15px;
 }
-/* .title {
-    background-color: #e7e1e1;
-    padding: 12px;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px grey;
-} */
-.test{
-    background-color: transparent;
-    padding: 12px;
-}
 .gach-ngang{
     border-top: 1px solid #d0d0d0;
     position: relative;
+    margin-bottom: 10px;
 }
 .title a{
-    left: 44%;
     position: absolute;
     top: -25px;
     display: block;
@@ -208,29 +270,44 @@ a.xem-tat-ca {
     cursor: pointer;
 }
 .card-header .pop-up{
-    z-index: 99;
     width: 100%;
-    height: 50px;
+    height: 100;
     position: absolute;
-    bottom: 31%;
+    bottom: 24%;
     visibility: hidden;
     opacity: 0;
     background-color: none;
 }
-
+.card-header .pop-up.xemTatCa {
+    bottom: 28%;
+}
+.pop-up a{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 5px;
+}
 .pop-up.show-pop-up{
     visibility: visible;
     opacity: 1;
     transition: 0.4s;
-    background: none repeat scroll 0 0 rgba(121, 117, 101, 0.8);
+    background: none repeat scroll 0 0 rgba(110, 109, 103, 0.8);
     transition: 0.8;
-    transform: translateY(7px);
+    transform: translateY(0px);
+}
+.nutDatHang{
+    float: right;
+    margin: auto;
+    
+}
+.page-home{
+    width: 100%;
+    height: 100%;
 }
 .page_control{
     display: flex;
     margin-top: 20px;
-    left: 50%;
-    margin-left: 45%;
 }
 .page_control li{
     padding-left: 20px;
@@ -280,7 +357,7 @@ ul.footer_HTKH li a {
     display: block;
     list-style: none;
     left: 47%;
-    margin-left: 40%;
+    
     margin-top: 20px;
     color: #fafafa;
 }
@@ -302,11 +379,7 @@ ul.footer_HTKH li a {
     height: 50px;
     padding-left: 10px;
 }
-.nutDatHang{
-    padding-left: 20px;
-    margin: 10px; 
-    margin-left: 20px;
-}
+
 
 .DK{
     background-color: none;
@@ -316,47 +389,7 @@ ul.footer_HTKH li a {
     color: red;
     
 }
-.formDK{
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    display: block;
-    transform: translateZ(500px);
-    margin-left:350px ;
-}
 
-.formDK.show-form{
-    opacity: 1;
-    visibility: visible;
-    z-index: 99999;
-    background-color:lightgrey;
-    color: rgb(0, 0, 0);
-   
-    font-weight: bold;
-    padding: 20px;
-    margin: 0 auto;
-    margin-left:350px ;
-    transform: translateZ(0px);
-    transition: 0.6s;
-    
-}
-.nenMo{
-    visibility: hidden;
-    opacity: 0.6;
-    top: 0px;
-    left: 0px;
-    background-color: #000;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 99998;
-}
-.nenMo.hienMo{
-    opacity: 0.6;
-    visibility: visible;
-    
-    
-}
 .DN{
     background-color: none;
 }
@@ -364,35 +397,13 @@ ul.footer_HTKH li a {
     color: red;
     
 }
-.formDN{
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    display: block;
-    transform: translateZ(500px);
-    margin-left:350px ;
-}
-
-.formDN.show-form{
-    opacity: 1;
-    visibility: visible;
-    z-index: 99999;
-    background-color:lightgrey;
-    color: rgb(0, 0, 0);
-   
-    font-weight: bold;
-    padding: 20px;
-    margin: 0 auto;
-    margin-left:350px ;
-    transform: translateZ(0px);
-    transition: 0.6s;
-    
-}
 @supports ((position: -webkit-sticky) or (position: sticky)) {
     .dangKiNhap {
       position: -webkit-sticky;
       position: sticky;
       top: 0;
+      width: 100%;
+      height: 1000;
       z-index: 9999999999999;
     }
   }
@@ -401,6 +412,108 @@ body.blockScroll{
     position: fixed;
     
 }
+.chatIcon{
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    font-size: 80px;
+    color: rgb(230, 18, 18);
+    
+    cursor: pointer;
+    z-index: 99999999999999999999999999;
+}
+.chatBox{
+    
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 400px;
+    height: 75vh;
+    background-color: #74e042;
+    z-index: 9999999;
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+    
+}
+.chatBox.active{
+    transform: scaleY(1);
+}
+.chat-boxx {
+    
+    position: fixed;
+    width: 300px;
+    box-shadow: 0 0 10px #000000;
+    transform: translate(0px, 20px);
+    transition: opacity 0.5s ease-in-out 0s;
+    z-index: 999900;
+    right: -1px;
+    opacity: 0;
+    visibility: hidden;
+    right: 30px;
+    bottom: 30px;
+    margin-right: 50px;
+    border-width: 20px;
+    border-color: rgb(230, 18, 18);
+    
+}
 
+.chat-empty{
+    padding: 10px;
+}
+.chat-boxx::before{
+    border-style: solid;
+    border-color: transparent transparent rgb(245, 7, 7);
+    border-width: 10px;
+    position: absolute;
+    content: "";
+    border: 2px ;
+    right: 38px;
+    top: -17px;
+}
+.chat-boxx.show{
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(255, 255, 255);
+}
+.chat{
+    margin-top: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    background: transparent;
+    border: none;
+    margin-left: 50px;
+}
+.hidden{
+    display: none i !important;
+}
+#hinhanh:hover {
+    transform: scale(0.9);
+    color: rgb(19, 247, 11);
+    -ms-zoom-animation:initial;
+  }
+   #hinhanh:hover .overlay{
+    opacity: 1;
+    
+  }
+  #hinhanh a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 103px;
+  }
+  
+/* backToTop */
+#back-to-top{
+    cursor: pointer;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    display:none;
+}
+#back-to-top a{
+  border-radius: 50%;
+  font-size: 20px;
+}
 
-
+.page_control .active a{
+    color: #000;
+}

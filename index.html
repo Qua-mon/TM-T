@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    
+
     <link rel="stylesheet" type="text/css" href="hamburgers-master/dist/hamburgers.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
     <link rel="stylesheet" type="text/css" href="bstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    
-   
-    
+    <link rel="stylesheet" type="text/css" href="jquery.convform.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 
 </head>
 
 <body>
-    <div class="nenMo"></div>
-    <div class="page-home ">
-        <div class="header " id="header-top">
+    <div class="page-home">
+        <div class="header" id="header-top">
             <section class="header-content clearfix">
                 <!--Menu tren-->
                 <div class="container-fluid ">
@@ -44,14 +45,17 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+
                             <div class="card-header">
-                                <a class="nav-link cart-item-count" href="#" data-cesta-feira-items-count>
+                                <a class="nav-link cart-item-count" href="../HTML2020/TEST2/cart.html"
+                                    data-cesta-feira-items-count>
                                     <span class="fa fa-shopping-cart"></span>
                                 </a>
                                 <div class="card-header-top-box">
                                     <div class="cart-empty">
                                         Giỏ hàng chưa có sản phẩm
                                     </div>
+
                                 </div>
                             </div>
                             <div class="user-login">
@@ -59,27 +63,27 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="fa fa-user" aria-hidden="true"></i>
                                     </a>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" id="user-drop">
                                         <li>
-                                            <a href="#" class="DN">
+                                            <a href="#" class="DN" data-toggle="modal" data-target="#form1">
                                                 <i class="fa fa-user-circle"></i> Đăng nhập
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="DK ">
+                                            <a href="#" class="DK" data-toggle="modal" data-target="#form2">
                                                 <i class="fa fa-plus"></i> Đăng ký
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
             </section>
-        
-    
+
+
             <!--Menu San pham-->
             <section class="navigation-menu ">
                 <div class="container-fluid ">
@@ -121,11 +125,32 @@
                                                 <li><a class="dropdown-item" href="#"> D </a>
                                             </ul>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link" href="#" data-toggle="dropdown">
                                                 <span><i class="fa fa-tablet" aria-hidden="true"></i></span>
                                                 <span>Tablet</span>
                                             </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#"> A </a></li>
+                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
+                                                    <ul class="submenu dropdown-menu">
+                                                        <!--Menu cap 3-->
+                                                        <li><a class="dropdown-item" href=""> B1</a></li>
+                                                        <li><a class="dropdown-item" href=""> B2</a></li>
+                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
+                                                            <ul class="submenu dropdown-menu">
+                                                                <!--Menu cap 4-->
+                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
+                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href=""> B4</a></li>
+                                                        <li><a class="dropdown-item" href=""> B5</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> C </a></li>
+                                                <li><a class="dropdown-item" href="#"> D </a>
+                                            </ul>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link" href="#" data-toggle="dropdown">
@@ -152,17 +177,61 @@
                                                 <li><a class="dropdown-item" href="#"> D </a>
                                             </ul>
                                         </li>
-                                        <li class="nav-item">
+                                        <li class="nav-item dropdown">
                                             <a class="nav-link" href="#">
-                                                <span><i class="fa fa-headphones" aria-hidden="true"></i></span>
+                                                <span><i class="fa fa-headphones" aria-hidden="true"
+                                                        data-toggle="dropdown"></i></span>
                                                 <span>Phụ kiện</span>
                                             </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#"> A </a></li>
+                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
+                                                    <ul class="submenu dropdown-menu">
+                                                        <!--Menu cap 3-->
+                                                        <li><a class="dropdown-item" href=""> B1</a></li>
+                                                        <li><a class="dropdown-item" href=""> B2</a></li>
+                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
+                                                            <ul class="submenu dropdown-menu">
+                                                                <!--Menu cap 4-->
+                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
+                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href=""> B4</a></li>
+                                                        <li><a class="dropdown-item" href=""> B5</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> C </a></li>
+                                                <li><a class="dropdown-item" href="#"> D </a>
+                                            </ul>
                                         </li>
-                                        <li class="nav-item">
+                                        <li class="nav-item dropdown">
                                             <a class="nav-link" href="#">
-                                                <span><i class="fa fa-clock" aria-hidden="true"></i></span>
+                                                <span><i class="fa fa-clock" aria-hidden="true"
+                                                        data-toggle="dropdown"></i></span>
                                                 <span>Đồng hồ</span>
                                             </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#"> A </a></li>
+                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
+                                                    <ul class="submenu dropdown-menu">
+                                                        <!--Menu cap 3-->
+                                                        <li><a class="dropdown-item" href=""> B1</a></li>
+                                                        <li><a class="dropdown-item" href=""> B2</a></li>
+                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
+                                                            <ul class="submenu dropdown-menu">
+                                                                <!--Menu cap 4-->
+                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
+                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href=""> B4</a></li>
+                                                        <li><a class="dropdown-item" href=""> B5</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> C </a></li>
+                                                <li><a class="dropdown-item" href="#"> D </a>
+                                            </ul>
                                         </li>
                                     </ul>
                                 </div> <!-- navbar-collapse.// -->
@@ -170,99 +239,104 @@
                         </div>
                     </div>
                 </div>
+
             </section>
-        </div>
-        <div class="container dangKiNhap">
-                                
-            <form  class="formDK " onsubmit="return validateForm()">
-                <ul>
-                    <div class="container-fluid text-uppercase" style="text-align: center;"> 
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" class="close">&times;</span>
-                        </button>
-                        <h4 >Đăng Kí</h4>
-                       
-                    </div>
-                    <br>
-                    <div class="container-fluid text-uppercase" style="text-align: center;" class="input-group" >
-                        <span style="width: 20px;"><i class="fas fa-user"> </i></span>
-                        <input type="text" id="Fname" class="validate" name="Fname1" placeholder="enter your first name" style="width: 300px;"
-                        pattern=".{02,}" title="02 or more characters">
-                    </div>
-                    <br>
-                    <div class="container-fluid text-uppercase" style="text-align: center;" class="input-group" >
-                        <span style="width: 20px;"><i class="fas fa-user"> </i></span>
-                        <input type="text" required id="Lname" name="Lname1" placeholder="enter your last name" style="width: 300px;" 
-                        pattern=".{02,}" title="02 or more characters">
-                    </div>
-                    <br>
-                    <div class="container-fluid text-uppercase" style="text-align: center;" class="input-group" >
-                        <span style="width: 10px;"><i class="material-icons">email</i></span>
-                        <input type="email" id="email" required name="email1" placeholder="enter your email" style="width: 300px;"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid email!">
-                    </div>
-                    <br>
-                    <div class="container-fluid text-uppercase" style="text-align: center;" class="input-group" >
-                        <span style="width: 20px;"><i class="fab fa-whatsapp"></i></span>
-                        <input type="number" id="phone" required name="phone1" placeholder="enter your number phone" style="width: 300px;">
-                    </div>
-                    <br>
-                    <div class="container-fluid text-uppercase" style="text-align: center;" class="input-group" >
-                        <span style="width: 20px;"><i class="fas fa-lock"> </i></span>
-                        <input type="password" required id="pass" name="pass1" placeholder="enter your password" style="width: 300px;">
-                    </div>
-                    <br>
-                    <a href="#" style="text-align: center; text-decoration: none;" class="doiForm">Đã có tài khoản</a>
-                    <br>
-                    <div class="container-fluid" style="text-align: center;">
-                        <button class="btn btn-info" >Đăng kí</button>
-                        <button class="btn btn-info" type="reset">Xóa</button>
-                    </div>
-                    
-                </ul>
+            <!--Form Dang nhap-->
+            <div class="modal fade" id="form1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <h3 class="modal-title" id="exampleModalLabel"
+                                style="text-align: center; text-shadow: 0 0 blue;">Đăng Nhập</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form name="modal-form" action="" onsubmit="validateForm1()">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
+                                    <input type="text" id="account" name="account" class="form-control"
+                                        placeholder="tài khoản..." required>
 
-            </form>
-            
-        
-        </div>
-        <div class="container">
-            <form  class="formDN" onsubmit="return validateFormDN()">
-                <ul>
-                    <div class="container-fluid text-uppercase" style="text-align: center;"> 
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" class="close">&times;</span>
-                        </button>
-                        <h4 >Đăng Nhập</h4>
-                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
+                                    <input type="password" class="form-control" id="name1" placeholder="...... "
+                                        required>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success">Xác nhận</button>
+                                <button type="reset" class="btn btn-success">Cancel</button>
+                            </div>
+                        </form>
                     </div>
-                    <br>
-                    
-                    
-                    <div class="container-fluid text-uppercase" style="text-align: center;" class="input-group" >
-                        <span style="width: 10px;"><i class="material-icons">email</i></span>
-                        <input type="mail" name="email" id="email1" placeholder="enter your email" style="width: 300px;"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid email!">
-                    </div>
-                    <br>
-                    
-                    <div class="container-fluid text-uppercase" style="text-align: center;" class="input-group" >
-                        <span style="width: 20px;"><i class="fas fa-lock"> </i></span>
-                        <input type="password" name="pass" id="pass1" placeholder="enter your password" style="width: 300px;"
-                        pattern=".{08,}" title="08 or more characters">
-                    </div>
-                    <br>
-                    <a href="#">Quên mật khẩu<i class="fas fa-question-circle"></i></a><a href="#" class="doiForm1">/hoặc Đăng kí</a>
-                    <br>
-                    <div class="container-fluid" style="text-align: center;">
-                        <button  class="btn btn-info">Đăng nhập</button>
-                        
-                    </div>
-                </ul>
+                </div>
+            </div>
+            <!--Form Dang ky-->
+            <div class="modal fade" id="form2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <h3 class="modal-title" id="exampleModalLabel"
+                                style="text-shadow: 0 0 blue; text-align: center;">Đăng Ký Tài Khoản</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form name="modal-form" action="" onsubmit="validateForm1()">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fas fa-users"> </i> Họ và tên</span>
+                                    <input type="text" id="account" name="account" class="form-control"
+                                        placeholder="Họ tên..." required pattern=".{08,}" title="08 or more characters">
+                                    <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
+                                        mật.</small>
+                                </div>
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
+                                    <input type="text" id="account" name="account" class="form-control"
+                                        placeholder="tài khoản..." required pattern=".{08,}"
+                                        title="08 or more characters">
 
-            </form>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
+                                    <input type="password" class="form-control" id="name1" placeholder="....." required
+                                        pattern=".{08,}" title="08 or more characters">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sdt"><i class="fas fa-phone"></i>Số điện thoại</label>
+                                    <input type="text" class="form-control" id="sdt" placeholder="SĐT" required
+                                        pattern=".{02,}" title=" nhập đủ số điện thoại">
+                                </div>
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fab fa-mailchimp"></i> Email</span>
+                                    <input type="email" id="account" name="account" class="form-control"
+                                        placeholder="...@gmail.com" required
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        title="Vui lòng nhập đúng định dạng mail!">
+                                    <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
+                                        mật.</small>
+                                </div>
+
+
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success">Xác nhận</button>
+                                <button type="reset" class="btn btn-success"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="slideshow all" >
+        <!--Banner-->
+        <div class="slideshow all col-md-12 col-sm">
             <div class="container-fluid">
                 <div id="hinh-banner" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -287,71 +361,76 @@
                 </div>
             </div>
         </div>
-        <div class="san-pham-noi-bat">
+        <div class="san-pham-noi-bat ">
             <div class="container-fluid">
-                
+
                 <abbr title="click vào để xem tất cả sản phẩm">
-                <div class="title">
-                    <div class="gach-ngang">
-                        <a href="#">Sản phẩm nối bật</a>
+                    <div class="title">
+                        <div class="gach-ngang">
+                            <a href="#">Sản phẩm nối bật</a>
+                        </div>
                     </div>
-                </div>
                 </abbr>
                 <div class="san-pham">
                     <div class="pagination-container-mot">
                         <div data-page="1">
                             <div class="row d-flex ml-2">
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-xs-12 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản
+                                                    phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
                                         <div class="card-body">Tên Sản Phẩm:</div>
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 clearfix d-none d-md-block">
+                                <div class="col-md-3 col-xs-12 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
                                         <div class="card-body">Tên Sản Phẩm:</div>
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 clearfix d-none d-md-block">
+                                <div class="col-md-3 col-xs-12 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
                                         <div class="card-body">Tên Sản Phẩm:</div>
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 clearfix d-none d-md-block">
+                                <div class="col-md-3 col-xs-12 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
                                         <div class="card-body">Tên Sản Phẩm:</div>
                                         <div class="card-footer">Giá:</div>
@@ -361,17 +440,18 @@
                         </div>
                         <div data-page="2" style="display:none;">
                             <div class="row d-flex ml-2">
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-xs-12 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
-                                        <div class="card-body">Tên Sản Phẩm:</div>
+                                        <div class="card-body">Tên Sản Phẩm:aaa</div>
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
@@ -379,39 +459,42 @@
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
                                         <div class="card-body">Tên Sản Phẩm:</div>
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 clearfix d-none d-md-block">
+                                <div class="col-md-3 col-xs-12 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
                                         <div class="card-body">Tên Sản Phẩm:</div>
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 clearfix d-none d-md-block">
+                                <div class="col-md-3 col-xs-12 col-sm-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
                                             <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid" style="width:200px; height: 200px;">
+                                                class="img-fluid">
                                         </div>
                                         <div class="card-body">Tên Sản Phẩm:</div>
                                         <div class="card-footer">Giá:</div>
@@ -435,127 +518,135 @@
             <div class="hang-khuyen-mai">
                 <div class="container-fluid">
                     <abbr title="click vào để xem tất cả sản phẩm">
-                    <div class="title">
-                        <div class="gach-ngang">
-                            <a href="#">Hàng khuyến mãi</a>
+                        <div class="title">
+                            <div class="gach-ngang">
+                                <a href="#">Hàng khuyến mãi</a>
+                            </div>
                         </div>
-                    </div>
                     </abbr>
                     <div class="san-pham">
                         <div class="pagination-container-hai">
                             <div data-page="1">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
-                                            </div>
-                                            <div class="card-body">Tên Sản Phẩm:</div>
-                                        <div class="card-footer">Giá:</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
-                                                </div>
-                                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
-                                        <div class="card-footer">Giá:</div>
+                                            <div class="card-footer">Giá:</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="pop-up">
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
+                                                </div>
+                                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="card-body">Tên Sản Phẩm:</div>
+                                            <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div data-page="2" style="display:none;">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
-                                            </div>
-                                            <div class="card-body">Tên Sản Phẩm:</div>
-                                        <div class="card-footer">Giá:</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
-                                                </div>
-                                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="card-body">Tên Sản Phẩm:</div>
+                                            <div class="card-footer">Giá:</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="pop-up">
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
+                                                </div>
+                                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
@@ -580,68 +671,72 @@
             <div class="sap-ve-hang">
                 <div class="container-fluid">
                     <abbr title="click vào để xem tất cả sản phẩm">
-                    <div class="title">
-                        <div class="gach-ngang">
-                            <a href="#">Hàng sắp về</a>
+                        <div class="title">
+                            <div class="gach-ngang">
+                                <a href="#">Hàng sắp về</a>
+                            </div>
+
                         </div>
-                        
-                    </div>
                     </abbr>
                     <div class="san-pham">
                         <div class="pagination-container-ba">
                             <div data-page="1">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
@@ -651,57 +746,61 @@
                             </div>
                             <div data-page="2" style="display:none;">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 clearfix d-none d-md-block">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
-                                                    <a href="#" style="color: brown; text-decoration: none;">chi tiết sản phẩm</a>
-                                                    <abbr title="Thêm vào giỏ hàng" ><button class="btn btn-info nutDatHang" >Đặt hàng</button></abbr>
+                                                    <a href="#">Chi tiết sản phẩm</a>
+                                                    <abbr title="Thêm vào giỏ hàng"><button
+                                                            class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                                 </div>
                                                 <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                    class="img-fluid" style="width:200px; height: 200px;">
+                                                    class="img-fluid">
                                             </div>
                                             <div class="card-body">Tên Sản Phẩm:</div>
                                             <div class="card-footer">Giá:</div>
@@ -725,28 +824,218 @@
             </div>
         </div>
     </div>
-    <div class="service" style="margin-bottom: 15px;">
+    <div class="service" style="margin-bottom: 15px; margin-top: 15px;">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-4">
                     <h3>Bảo Hành</h3>
                     <h2><i class="fas fa-heartbeat"></i></h2><br>
-                    <a href="dichVu1.html"><button  class="btn btn-info"> >>xem chi tiết</button></a>
+                    <a href="dichVu1.html"><button class="btn btn-info"> >>xem chi tiết</button></a>
                 </div>
                 <div class="col-md-4">
                     <h3> Sửa chửa</h3>
                     <h2><i class="fas fa-cog fa-spin"></i></h2><br>
-                    <a href="dichvu2.html"> <button  class="btn btn-info"> >>xem chi tiết</button></a>
+                    <a href="dichvu2.html"> <button class="btn btn-info"> >>xem chi tiết</button></a>
                 </div>
                 <div class="col-md-4">
                     <h3>Vận chuyển</h3>
                     <h2><i class="fas fa-truck"></i></h2><br>
-                    <a href="dichvu3.html"><button  class="btn btn-info"> >>xem chi tiết</button></a>
+                    <a href="dichvu3.html"><button class="btn btn-info"> >>xem chi tiết</button></a>
                 </div>
             </div>
         </div>
     </div>
-    <i class='fas fa-tools'></i> 
+    <div>
+        <div class="chatIcon" id="hinhanh">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+        </div>
+        <div class="chat">
+            <div class="chat-boxx">
+                <div class="chat-empty">
+                    bạn muốn chat với chúng tôi ?
+                </div>
+            </div>
+        </div>
+        <div class="chatBox">
+            <form action="" method="GET" class="hidden">
+                <div class="conv-form-wrapper">
+                    <select name="programmer" data-conv-question="bạn muốn được tư vấn về sản phẩm của chúng tôi ?">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <div data-conv-fork="programmer">
+                        <div data-conv-case="yes">
+                            <input type="text" data-conv-question="Chào bạn." data-no-answer="true">
+                            <select name="programmer" data-conv-question="tôi có thể giúp được gì không ??">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                            <!--repply-->
+                            <div data-conv-fork="programmer">
+                                <div data-conv-case="yes">
+                                    <input type="text" data-conv-question="bạn có thể hỏi tôi mọi thứ "
+                                        data-no-answer="true">
+                                    <select name="programmer" data-conv-question="bạn muốn chiếc laptop loại nào ??">
+                                        <option value="gaming">Gaming</option>
+                                        <option value="văn phòng">Văn phòng</option>
+                                    </select>
+                                    <div data-conv-fork="programmer">
+                                        <div data-conv-case="gaming">
+                                            <input type="text" data-conv-question="chúng tôi có các dòng sau"
+                                                data-no-answer="true">
+                                            <select name="programmer" data-conv-question="Asus Acer Legion">
+                                                <option value="Asus">Asus</a></option>
+                                                <option value="Acer">Acer</option>
+                                                <option value="Legion">Legion</option>
+                                            </select>
+                                            <!--repply gaming-->
+                                            <div data-conv-fork="programmer">
+                                                <div data-conv-case="Asus">
+                                                    <input type="text"
+                                                        data-conv-question="chúng tôi hiện có các sản phẩm sau"
+                                                        data-no-answer="true">
+                                                    <select name="programmer" data-conv-question="cùng tìm hiểu nha">
+                                                        <option value="yes">Đi tới sản phẩm </option>
+                                                        <option value="no">không cảm ơn</option>
+                                                    </select>
+                                                    <div data-conv-fork="programmer">
+                                                        <div data-conv-case="yes">
+                                                            <input type="text"
+                                                                data-conv-question="chúng tôi có các dòng sau"
+                                                                data-no-answer="true">
+                                                            <select name="programmer" data-conv-question="Asus ">
+                                                                <option value="Asus">go to Asus product<a
+                                                                        href="chitiet.html"></a></option>
+
+                                                            </select>
+
+                                                        </div>
+                                                        <div data-conv-case="no">
+                                                            <select name="thought"
+                                                                data-conv-question="một ngày tốt lành nhé">
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No..</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-conv-case="no">
+                                                    <select name="thought"
+                                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No..</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div data-conv-fork="programmer">
+                                                <div data-conv-case="Acer">
+                                                    <input type="text"
+                                                        data-conv-question="chúng tôi hiện có các sản phẩm sau"
+                                                        data-no-answer="true">
+                                                    <select name="programmer" data-conv-question="cùng tìm hiểu nha">
+                                                        <option value="yes">Đi tới sản phẩm </option>
+                                                        <option value="no">không cảm ơn</option>
+                                                    </select>
+                                                    <div data-conv-fork="programmer">
+                                                        <div data-conv-case="yes">
+                                                            <input type="text"
+                                                                data-conv-question="chúng tôi có các dòng sau"
+                                                                data-no-answer="true">
+                                                            <select name="programmer" data-conv-question="Acer ">
+
+                                                                <option value="Acer">go to Acer product<a
+                                                                        href="chitiet.html"></a></option>
+
+                                                            </select>
+
+                                                        </div>
+                                                        <div data-conv-case="no">
+                                                            <select name="thought"
+                                                                data-conv-question="một ngày tốt lành nhé">
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No..</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-conv-case="no">
+                                                    <select name="thought"
+                                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No..</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div data-conv-fork="programmer">
+                                                <div data-conv-case="Legion">
+                                                    <input type="text"
+                                                        data-conv-question="chúng tôi hiện có các sản phẩm sau"
+                                                        data-no-answer="true">
+                                                    <select name="programmer" data-conv-question="cùng tìm hiểu nha">
+                                                        <option value="yes">Đi tới sản phẩm</option>
+                                                        <option value="no">không cảm ơn</option>
+                                                    </select>
+                                                    <div data-conv-fork="programmer">
+                                                        <div data-conv-case="yes">
+                                                            <input type="text"
+                                                                data-conv-question="chúng tôi có các dòng sau"
+                                                                data-no-answer="true">
+
+                                                            <select name="programmer" data-conv-question="Legion ">
+
+                                                                <option value="Legion" id="legion">go to Legion product</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div data-conv-case="no">
+                                                            <select name="thought"
+                                                                data-conv-question="một ngày tốt lành nhé">
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No..</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-conv-case="no">
+                                                    <select name="thought"
+                                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No..</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-conv-case="văn phòng">
+                                            <select name="thought" data-conv-question="chúng mình đã hết hàng!">
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-conv-case="no">
+                                    <select name="thought"
+                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-conv-case="no">
+                            <select name="thought" data-conv-question="rất vui khi được nói chuyện với bạn!">
+
+                            </select>
+                        </div>
+                    </div>
+            </form>
+
+
+        </div>
+    </div>
+    </div>
     <footer class="footer">
         <div class="container bottom_border">
             <div class="row">
@@ -777,9 +1066,9 @@
                         <h5>Thông tin</h5>
                     </span>
                     <ul class="footer_HTKH">
-                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
                         <li><a href="#">Thông tin liên hệ</a></li>
-                        <li><a href="#">Góp ý - khiếu nại</a></li>
+                        <li><a href="gopYKhieNai.html">Góp ý - khiếu nại</a></li>
                         <li><a href="#">Giờ làm việc</a></li>
                     </ul>
                 </div>
@@ -798,7 +1087,10 @@
             </div>
         </div>
     </footer>
-    </div>
+
+    <div id="back-to-top" class="fixed-action-btn smooth-scroll">
+        <a href="#" class="btn btn-primary btn-lg" role="button" title="Trở về đầu trang" data-toggle="tooltip" data-placement="left"><i class="fa fa-chevron-up"></i></a>
+      </div>
 
     <!--Animation cho menu hambugers-->
     <script type="text/javascript">
@@ -813,13 +1105,32 @@
             });
         }
     </script>
+
+    <!--Thêm script sự kiện scroll page-->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("header-top");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="jquery.convform.js"></script>
     <script type="text/javascript" src="js/javaScript.js"></script>
 </body>
 
