@@ -89,7 +89,7 @@ a.dropdown-toggle {
 }
 
 ul.dropdown-menu.show {
-    z-index: 9999;
+    z-index: 999;
 }
 
 .cart-empty {
@@ -639,4 +639,8 @@ body.blockScroll {
 
 .page_control .active a {
     color: #000;
+}
+
+.sticky-top{
+    z-index: 998 !important;
 }
