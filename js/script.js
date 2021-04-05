@@ -245,11 +245,23 @@ $(document).ready(function() {
 
 // Add mau den khi click chuyen div //
 $(document).ready(function() {
-    $('li').click(function(e) {
+    $('.page_control li').click(function(e) {
         e.preventDefault();
         $(this).addClass('active');
         $(this).siblings().each(function() {
             $(this).removeClass('active');
         });
+    });
+});
+
+// Thu gon - Xem chi tiet
+$(document).ready(function() {
+    $(".readmore").click(function() {
+        $(".more").slideToggle(1000);;
+        if ($(this).text() == 'Xem Chi Tiết') {
+            $(this).text('Thu Gọn');
+        } else {
+            $(this).text('Xem Chi Tiết');
+        }
     });
 });

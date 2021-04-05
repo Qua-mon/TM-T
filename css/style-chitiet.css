@@ -1,3 +1,4 @@
+/* Menu */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,382 @@ body {
     font-family: Arial;
 }
 
-#search-engine {
-    margin-left: 100px;
+.header-content {
+    padding: 10px;
+}
+
+.box-search {
+    padding: 20px 0px;
+}
+
+.header .card-header {
+    float: left;
+    margin-top: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    background: transparent;
+    border: none;
+    margin-left: 50px;
+}
+
+.user-login {
+    float: left;
+    margin-top: 28px;
+    margin-left: 60px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+a.nav-link.cart-item-count {
+    color: #7e7e7e;
+    font-size: 25px;
+}
+
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fafafa;
+}
+
+a.dropdown-toggle {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu li {
+    padding: 5px;
+}
+
+.dropdown-menu li:hover {
+    /* Hover menu con */
+    background-color: #cecece;
+}
+
+.navigation-menu .dropdown:hover>.dropdown-menu {
+    /*Hover menu*/
+    display: block;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #000;
+    padding-left: 10px;
+}
+
+.card-header-top-box {
+    position: absolute;
+    width: 330px;
+    box-shadow: 0 0 10px #000000;
+    transform: translate(0px, 20px);
+    transition: opacity 0.5s ease-in-out 0s;
+    z-index: 9999;
+    right: -1px;
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+}
+
+ul.dropdown-menu.show {
+    z-index: 999;
+}
+
+.cart-empty {
+    padding: 10px;
+}
+
+.card-header-top-box::before {
+    border-style: solid;
+    border-color: transparent transparent rgb(0, 0, 0);
+    border-width: 8px;
+    position: absolute;
+    content: "";
+    right: 38px;
+    top: -17px;
+}
+
+.card-header-top-box.show {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(255, 255, 255);
+}
+
+@media(max-width:350px) {
+    .social_footer {
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width: 580px) and (min-width: 351px) {
+    .social_footer {
+        margin-left: 20%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+    .social_footer {
+        margin-left: 30%;
+    }
+}
+@media (max-width: 800px) {
+    .user-login {
+        position: absolute;
+        right: 140px;
+    }
+    .header .card-header {
+        float: right;
+    }
+}
+
+@media(min-width:800px) {
+    /* Thêm css sticky */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .sticky+.path-product {
+        padding-top: 175px;
+    }
+    .social_footer {
+        margin-left: 40%;
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu .dropdown-toggle:after {
+        border-top: .3em solid transparent;
+        border-right: 0;
+        border-bottom: .3em solid transparent;
+        border-left: .3em solid;
+    }
+    .dropdown-menu .dropdown-menu {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .dropdown-menu li {
+        position: relative;
+    }
+    .nav-item .submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+    }
+    .nav-item .submenu-left {
+        right: 100%;
+        left: auto;
+    }
+    .dropdown-menu>li:hover {
+        background-color: #f1f1f1
+    }
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+    }
+}
+
+
+/*Định dạng hambuger*/
+
+@media (min-width:967px) {
+    .hamburger.hamburger--emphatic {
+        display: none;
+    }
+}
+
+.nav-item a.nav-link {
+    color: rgb(22, 22, 22) !important;
+    padding-left: 140px !important;
+}
+
+nav ul.dropdown-menu {
+    margin-left: 80px;
+}
+.sticky-top{
+    z-index: 998 !important;
+}
+/*-------------Duc's CSS-------------*/
+
+#col-1st {
+    margin-left: 10px 10px;
+}
+
+#col-2nd {
+    margin-top: 20px;
+    font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+}
+
+#row2-2 {
+    margin-top: 10px;
+}
+
+
+.footer {
+    background-color: #263238;
+    padding-top: 50px;
+    color: #fafafa;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-title {
+    padding: 5px;
+    display: block;
+    border-bottom: 1px solid #fff;
+}
+
+.footer p {
+    margin-top: 25px;
+}
+
+ul.footer_HTKH {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.footer li {
+    padding-top: 10px;
+}
+
+ul.footer_HTKH li a {
+    color: #fafafa;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.social_footer {
+    display: block;
+    list-style: none;
+    left: 47%;
+    margin-top: 20px;
+    color: #fafafa;
+}
+
+.social_footer li {
+    padding: 30px;
+    display: inline;
+}
+
+.fab.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-facebook-f:hover {
+    color: rgb(105, 105, 248);
+}
+
+.social_footer li a {
+    font-size: 30px;
+}
+
+.fab.fa-instagram,
+.fa-twitter,
+.fa-facebook-f {
+    color: #fafafa;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    padding-left: 10px;
+}
+/* backToTop */
+
+#back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    display: none;
+}
+
+#back-to-top a {
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.page_control .active a {
+    color: #000;
+}
+
+
+/*----------------View detail---------------------*/
+
+.detail-slide-product-similar #row-text #text-left {
+    float: left;
+}
+
+.detail-slide-product-similar #row-text #text-right {
+    float: right;
+}
+
+.detail-slide-product-similar #row-text a {
+    text-decoration: none;
+}
+
+.more {
+    display: none;
+}
+
+.readmore {
+    display: block;
+    border: none;
+}
+
+.product-detail button {
+    width: 20%;
+    transition-duration: 0.5s;
+    background-color: inherit;
+    border-radius: 10px;
+}
+
+.product-detail button:hover {
+    background-color: blue;
+}
+
+.product-detail button:focus {
+    border: none;
+    outline: none;
+}
+
+.product-detail #row-detail-3 {
+    justify-content: center;
+}
+
+#col-slide {
+    margin: auto;
+}
+
+#card-slide {
+    width: 210px;
+    margin: 0px 40px 10px 40px;
+    border: none;
+}
+
+#row-slide {
+    justify-content: center;
+}
+
+.footer #card1 {
+    background-color: aquamarine;
+}
+
+.footer #footer-row2 {
+    justify-content: center;
+}
+
+.footer #footer-row2 a {
+    text-decoration: none;
+    color: deeppink;
+}
+
+.footer #footer-row3 {
+    justify-content: center;
+}
+
+.footer #card2 {
+    background-color: blue;
 }
