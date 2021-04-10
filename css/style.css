@@ -178,7 +178,7 @@ ul.dropdown-menu.show {
         width: 100%;
     }
     .sticky+.all {
-        padding-top: 150px;
+        padding-top: 175px; /* sua */
     }
     .title a {
         left: 44%;
@@ -225,8 +225,24 @@ ul.dropdown-menu.show {
     .dropdown-menu>li:hover>.submenu {
         display: block;
     }
+    .hinhSP{
+        width: 100px;
+    }
+    .media-body p{
+        font-size: 20px;
+    }
 }
-
+@media (max-width: 990px) {
+    .btnThanhToan{
+        margin-top: 10px;
+    }
+    .hinhSP{
+        width: 80px;
+    }
+    .media-body p{
+        font-size: 15px;
+    }
+}
 
 /*Định dạng hambuger*/
 
@@ -312,14 +328,14 @@ a.xem-tat-ca {
     width: 100%;
     height: 100;
     position: absolute;
-    bottom: 24%;
+    bottom: 29%;
     visibility: hidden;
     opacity: 0;
     background-color: none;
 }
 
 .card-header .pop-up.xemTatCa {
-    bottom: 28%;
+    bottom: 34%;
 }
 
 .pop-up a {
@@ -503,12 +519,11 @@ body.blockScroll {
     color: rgb(230, 18, 18);
     cursor: pointer;
     z-index: 99999999999999999999999999;
-    cursor: pointer;
     animation-duration: 0.01s;
-    -webkit-animation: glowing 1500ms infinite;
+    /* -webkit-animation: glowing 1500ms infinite;
     -moz-animation: glowing 1500ms infinite;
     -o-animation: glowing 1500ms infinite;
-    animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite; */
 }
 
 .chatBox {
@@ -529,7 +544,7 @@ body.blockScroll {
 
 .chat-boxx {
     position: fixed;
-    width: 300px;
+    width: 260px;
     box-shadow: 0 0 10px #000000;
     transform: translate(0px, 20px);
     transition: opacity 0.5s ease-in-out 0s;
@@ -537,15 +552,16 @@ body.blockScroll {
     right: -1px;
     opacity: 0;
     visibility: hidden;
-    right: 30px;
-    bottom: 30px;
+    right: 42px;
+    bottom: 45px;
     margin-right: 50px;
     border-width: 20px;
     border-color: rgb(230, 18, 18);
 }
 
 .chat-empty {
-    padding: 10px;
+    padding: 8px;
+    font-size: 15px;
 }
 
 .chat-boxx::before {
@@ -616,4 +632,61 @@ body.blockScroll {
 
 .sticky-top{
     z-index: 998 !important;
+}
+
+/* Css gio hang */
+.card{
+    height: 100%;
+  }
+  .card-footer{
+    background-color: #fff;
+  }
+  .cart-item-count {
+    position: relative;
+  }
+  
+  .cesta-feira__num-items{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #D80000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -2px;
+    right: -1px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  /*-------------------CSS Payment----------------------*/
+
+.payment #row-pay-2 .vertical-line {
+    border-left: 3px solid black;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.payment #row-pay-2 .first input {
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: #e5f8b9;
+}
+.btnThanhToan {
+    background-color: #A8CF45;
+    color: #fff;
+}
+.btnThanhToan:hover{
+    background-color: #608010;
+    color: #fff;
+}
+.table th, .table td
+{
+    border-top: none !important;
 }

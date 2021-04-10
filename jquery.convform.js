@@ -213,9 +213,16 @@ ConvState.prototype.answerWith = function (answerText, answerObject) {
         location.href = "xemtatca.html";
     if (answerText === "go to Acer product")
         location.href = "xemtatca.html";
+    if (answerText === "go to Asus VP product")
+        location.href = "xemtatca.html";
+    if (answerText === "go to Acer VP product")
+        location.href = "xemtatca.html";
+    if (answerText === "go to Legion VP product")
+        location.href = "xemtatca.html";
     if (this.current.input.type == 'password')
         answerText = answerText.replace(/./g, '*');
     var message = $('<div class="message from">' + answerText + '</div>');
+
 
     if (this.current.input.type == 'select' && this.parameters.selectInputStyle == 'disable') {
         $(this.wrapper).find('#' + this.parameters.inputIdName).prop('disabled', false);

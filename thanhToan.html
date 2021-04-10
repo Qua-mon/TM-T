@@ -3,28 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Góp ý</title>
-
-    <link rel="stylesheet" type="text/css" href="hamburgers-master/dist/hamburgers.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Thanh Toán Đơn Hàng</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
     <link rel="stylesheet" type="text/css" href="bstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="jquery.convform.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .table th,
+        .table td {
+            border-top: none !important;
+        }
+    </style>
 
 </head>
 
 <body>
-    <!-- <div class="nenMo"></div>-->
-
-    <div class="page-home">
+    <div class="page-deatail">
         <div class="header" id="header-top">
             <section class="header-content clearfix">
                 <!--Menu tren-->
-                <div class="container-fluid ">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
                             <a href="index.html" class="logo">
@@ -36,7 +38,7 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search...">
                                     <div class="input-group-append">
-                                        <button class="btn btn-secondary" type="button" ng-model="data">
+                                        <button class="btn btn-secondary" type="button">
                                             <i class="fa fa-search"></i>
                                         </button>
                                     </div>
@@ -49,40 +51,6 @@
                                 <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count>
                                     <span class="fa fa-shopping-cart"></span>
                                 </a>
-                                <div class="card-header-top-box">
-                                    <div class="cart-empty">
-                                        Giỏ hàng chưa có sản phẩm
-                                    </div>
-                                    <div class="container-fluid cartProducts"
-                                        style="margin-bottom: 0px; z-index: 99999;">
-                                        <div class="row">
-                                            <div class="">
-                                                <table class="table" border="0" style="width:97%; margin-left: 4px;">
-                                                    <thead>
-                                                    </thead>
-                                                    <tbody id="cart-items">
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td colspan="2"
-                                                                style="border-top: none; font-weight: bold; font-size: 17px; padding-top: 20px;">
-                                                                Tổng tiền <p id="total-value"
-                                                                    style="display: inline; margin-left: 10px">0đ
-                                                                </p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2"><a href="javascript:;"
-                                                                    class="btn btn-danger mr-5">Xem giỏ hàng</a><a
-                                                                    href="#" class="btn btnThanhToan">Thanh toán</a>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="user-login">
                                 <div class="dropdown">
@@ -108,6 +76,8 @@
                     </div>
                 </div>
             </section>
+
+
             <!--Menu San pham-->
             <section class="navigation-menu ">
                 <div class="container-fluid ">
@@ -295,75 +265,300 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <!--------------------------------------------------------------------------->
+        <section class="payment all">
+            <div class="container-fluid">
+                <div class="row justify-content-center mt-4" id="row-pay-1">
+                    <h4><b>Hoá đơn thanh toán</b></h4>
+                </div>
+                <div class="row mt-3" id="row-pay-2">
+                    <div class="col-md-6" style="border-right: 2px solid #dee2e6;">
+                        <div class="first">
+                            <p class="text-uppercase"><i class="fas fa-info-circle"></i>&nbsp;thông tin khách hàng</p>
+                            <p class="dropdown-divider"></p>
+                            <label for="name">Họ Và Tên</label>
+                            <div>
+                                <input type="text" id="name" placeholder="Họ Và Tên">
+                            </div>
+                            <label for="phone">Số Điện Thoại</label>
+                            <div>
+                                <input type="text" id="phone" placeholder="Số Điện Thoại">
+                            </div>
+                            <label for="mail">Email</label>
+                            <div>
+                                <input type="email" id="mail" placeholder="Email">
+                            </div>
+                            <label for="address">Địa Chỉ</label>
+                            <div>
+                                <input type="text" id="address" placeholder="Địa Chỉ">
+                            </div>
+                        </div>
+                        <div class="second mt-4">
+                            <p class="text-uppercase"><i class="fa fa-truck" aria-hidden="true"></i>&nbsp;Hình Thức Vận
+                                Chuyển</p>
+                            <p class="dropdown-divider"></p>
+                            <div id="radioVanChuyen">
+                                <input type="radio" value="fast" name="transport" checked="checked">&emsp;Vận chuyển
+                                nhanh (Khoảng 2 - 3
+                                ngày
+                                kể từ ngày nhận đơn)<br />
+                                <input type="radio" value="standard" name="transport">&emsp;Vận chuyển tiêu chuẩn (Giao
+                                hàng từ 7 ngày kể từ ngày nhận đơn)
+                            </div>
+                        </div>
+                        <div class="third mt-4">
+                            <p class="text-uppercase"><i class="far fa-credit-card"></i></i>&nbsp;phương thức thanh toán
+                            </p>
+                            <p class="dropdown-divider"></p>
+                            <div>
+                                <input type="radio" id="tienmat" name="pay">&emsp;Trả tiền mặt khi nhận hàng<br />
+                                <input type="radio" id="nganhang" name="pay">&emsp;Trả qua thẻ ngân hàng<br />
+                                <label for="acc-number">Số Tài Khoản</label>
+                                <div>
+                                    <input type="text" id="acc-number" placeholder="Số Tài Khoản">
+                                </div>
+                                <label for="name-owner">Tên Chủ Thẻ</label>
+                                <div>
+                                    <input type="text" id="name-owner" placeholder="Địa Chỉ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container all" style="margin-top: 100px; ">
 
-        </div>
-    </div>
-    <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-md-offset-1" style="overflow-x: auto;">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Sản phẩm</th>
+                                                <th></th>
+                                                <th>Số lượng</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cart-items">
+                                        </tbody>
+                                        <tfoot>
+                                            <tr style="border-top: 1px solid">
 
-    </div>
-    <footer class="footer">
-        <div class="container bottom_border">
-            <div class="row">
-                <div class=" col-md-4">
-                    <!--Tên công ty-->
-                    <span class="footer-title">
-                        <h5>Công ty Nguyễn Nhật Huy</h5>
-                    </span>
-                    <p><i class="fa fa-location-arrow"></i> Quận 1, Thành Phố Hồ Chí Minh. </p>
-                    <p><i class="fa fa-phone"></i> 0123456789 </p>
-                    <p><i class="fa fa fa-envelope"></i> apple@gmail.com </p>
-                </div>
-                <div class=" col-md-4">
-                    <!--Hỗ trợ khách hàng-->
-                    <span class="footer-title">
-                        <h5>Hỗ trợ khách hàng</h5>
-                    </span>
-                    <ul class="footer_HTKH">
-                        <li><a href="#">Thông tin bảo hành</a></li>
-                        <li><a href="#">Quy định về việc sửa chữa sản phẩm</a></li>
-                        <li><a href="#">Phương thức thanh toán</a></li>
-                        <li><a href="#">Trả góp</a></li>
-                    </ul>
-                </div>
-                <div class=" col-md-4">
-                    <!--Thông tin-->
-                    <span class="footer-title">
-                        <h5>Thông tin</h5>
-                    </span>
-                    <ul class="footer_HTKH">
-                        <li><a href="about.html">Giới thiệu</a></li>
-                        <li><a href="#">Thông tin liên hệ</a></li>
-                        <li><a href="#">Góp ý - khiếu nại</a></li>
-                        <li><a href="#">Giờ làm việc</a></li>
-                    </ul>
-                </div>
-                <!--Mạng xã hội-->
-                <div class="container-fluid">
-                    <ul class="social_footer">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <!--Copyright-->
-                <div class="container-fluid">
-                    <p class=" text-center mt-4">Copyright @2020 | Designed With by <a href="#">....</a></p>
+                                                <td style="text-align: right;" colspan="2">Tạm tính</td>
+                                                <td class="text-right tamTinh" id="total-value"><strong>0đ</strong></td>
+                                            </tr>
+                                            <tr style="border: none">
+                                                <td style="text-align: right;" colspan="2">Phí vận chuyển</td>
+                                                <td class="text-right" id="phi-van-chuyen"><strong>0đ</strong></td>
+                                            </tr>
+                                            <tr style="border-top: none !important;">
+                                                <td style="text-align: right;" colspan="2">Mã giảm giá</td>
+                                                <td class="text-right"><input type="text" size="10"></td>
+                                            </tr>
+                                            <tr style="border-top: 1px solid">
+                                                <td style="text-align: right;" colspan="2">Tổng tiền</td>
+                                                <td class="text-right" id="tongTien"><strong>0đ</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="text-align: right; padding-top: 20px;">
+                                                    <a href="#" class="btn btnThanhToan">Thanh toán</a>
+                                                </td>
+                                                <td style="padding-top: 20px;"><a href="#" class="btn btn-danger">Hủy
+                                                        đơn</a></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/javaScript.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
-    <script type="text/javascript" src="js/GioHang.js"></script>
+        <footer class="footer mt-5">
+            <div class="container bottom_border">
+                <div class="row">
+                    <div class=" col-md-4">
+                        <!--Tên công ty-->
+                        <span class="footer-title">
+                            <h5>Công ty Nguyễn Nhật Huy</h5>
+                        </span>
+                        <p><i class="fa fa-location-arrow"></i> Quận 1, Thành Phố Hồ Chí Minh. </p>
+                        <p><i class="fa fa-phone"></i> 0123456789 </p>
+                        <p><i class="fa fa fa-envelope"></i> apple@gmail.com </p>
+                    </div>
+                    <div class=" col-md-4">
+                        <!--Hỗ trợ khách hàng-->
+                        <span class="footer-title">
+                            <h5>Hỗ trợ khách hàng</h5>
+                        </span>
+                        <ul class="footer_HTKH">
+                            <li><a href="#">Thông tin bảo hành</a></li>
+                            <li><a href="#">Quy định về việc sửa chữa sản phẩm</a></li>
+                            <li><a href="#">Phương thức thanh toán</a></li>
+                            <li><a href="#">Trả góp</a></li>
+                        </ul>
+                    </div>
+                    <div class=" col-md-4">
+                        <!--Thông tin-->
+                        <span class="footer-title">
+                            <h5>Thông tin</h5>
+                        </span>
+                        <ul class="footer_HTKH">
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <li><a href="#">Thông tin liên hệ</a></li>
+                            <li><a href="gopYKhieNai.html">Góp ý - khiếu nại</a></li>
+                            <li><a href="#">Giờ làm việc</a></li>
+                        </ul>
+                    </div>
+                    <!--Mạng xã hội-->
+                    <div class="container-fluid">
+                        <ul class="social_footer">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <!--Copyright-->
+                    <div class="container-fluid">
+                        <p class=" text-center mt-4">Copyright @2020 | Designed With by <a href="#">....</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--------------------------------------------------------------------------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+        <script type="text/javascript" src="js/javaScript.js"></script>
+        <script type="text/javascript" src="js/GioHang.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+        <script type="application/javascript">
+            function initListaOrcamento() {
+                var products = $.CestaFeira({
+                    debug: true
+                }).getItems(),
+                    totalValueTemp = 0,
+                    $cartItems = $('#cart-items');
+
+                if (!products) {
+                    console.log("No items in cart!");
+                    return;
+                }
+
+                function updateTotalValue() {
+
+                    var totalValue = 0;
+
+                    $.each($('[data-item-total-value]'), function (index, item) {
+                        totalValue += $(item).data('item-total-value');
+                    });
+                    $('#total-value').html(parseFloat(totalValue).toLocaleString() + "đ");
+                }
+                function tinhTongTien(phiVanChuyen, totalValueTemp) {
+                    $('#phi-van-chuyen').html(parseFloat(phiVanChuyen).toLocaleString() + "đ");
+                    $('#tongTien').html(parseFloat(phiVanChuyen + totalValueTemp).toLocaleString() + "đ");
+                }
+                function mountLayout(index, data) {
+                    var phiVanChuyen = 50000;
+                    var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
+
+                    var inputVal = $('input').val();
+                    var $layout = "<tr id='product-" + index + "'><td ><div class='media'>" +
+                        "<img class='d-flex align-self-center hinhSP' src='img/SP-Detail/info-product-" + index + ".png'>" + "</div></td><td class=''>" +
+                        "<div class='media-body'>" +
+                        "<p class='mt-2'>" + data.product_name + "</p>" +
+                        "</div></td><td class='' style='text-align: left;'>" + data.quantity +
+                        "</td><td class=' text-center' data-item-total-value='" + totalValueTemp + "'><strong>" + "</strong></td>" +
+                        "</td></tr>";
+                    "</tr>";
+                    $cartItems.append($layout);
+                    tinhTongTien(phiVanChuyen, totalValueTemp);
+                }
+
+
+                $.each(products, function (index, value) {
+                    mountLayout(index, value);
+                });
+
+                updateTotalValue();
+
+                $(document).on('click', 'a[data-cesta-feira-delete-item]', function (e) {
+                    e.preventDefault();
+
+                    var productId = $(this).data('cesta-feira-delete-item');
+
+                    if ($(document).on('cesta-feira-item-deleted')) {
+                        $('#product-' + productId).fadeOut(500, function () {
+                            $(this).remove();
+                            updateTotalValue();
+                        });
+                    }
+                });
+
+                $(document).on('cesta-feira-clear-basket', function (e) {
+                    $('#cart-items tr').each(function (index, value) {
+                        $(value).fadeOut(500, function () {
+                            $(this).remove();
+                            updateTotalValue();
+                        });
+                    });
+                });
+
+            }
+
+
+            $(document).ready(function () {
+                initListaOrcamento();
+                // //
+
+                var giaTam;
+                $("#radioVanChuyen").click(function () {
+                    if ($('input:radio[name=transport]:checked').val() == "fast") {
+                        phiVanChuyen = 50000;
+                        $('#phi-van-chuyen').html(parseFloat(phiVanChuyen).toLocaleString() + "đ");
+                        $('.table tr td').each(function () {
+                            if ($(this).hasClass("tamTinh")) {
+                                giaTam = $(this).html();
+                            }
+                        });
+                        var c = giaTam.substring(0, giaTam.length - 1);
+                        var d = parseFloat(c.replace(/[^0-9-.]/g, ''));
+                        $('#tongTien').html(parseFloat(phiVanChuyen + d).toLocaleString() + "đ");
+                    }
+                    else {
+                        phiVanChuyen = 30000;
+                        $('#phi-van-chuyen').html(parseFloat(phiVanChuyen).toLocaleString() + "đ");
+                        $('.table tr td').each(function () {
+                            if ($(this).hasClass("tamTinh")) {
+                                giaTam = $(this).html();
+                            }
+                        });
+                        var c = giaTam.substring(0, giaTam.length - 1);
+                        var d = parseFloat(c.replace(/[^0-9-.]/g, ''));
+                        $('#tongTien').html(parseFloat(phiVanChuyen + d).toLocaleString() + "đ");
+                    }
+                });
+            });
+        </script>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-36251023-1']);
+            _gaq.push(['_setDomainName', 'jqueryscript.net']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
 </body>
 
 </html>

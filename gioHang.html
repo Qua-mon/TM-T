@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" type="text/css" href="hamburgers-master/dist/hamburgers.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
+  <link rel="stylesheet" type="text/css" href="bstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.convform.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header" id="header-top">
+    <section class="header-content clearfix">
+      <!--Menu tren-->
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
+            <a href="index.html" class="logo">
+              <img src="img/Logo/logo.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-5 col-sm-12 col-md-5 col-xs-12">
+            <div class="box-search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+
+            <div class="card-header">
+              <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count>
+                <span class="fa fa-shopping-cart"></span>
+              </a>
+            </div>
+            <div class="user-login">
+              <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+                <ul class="dropdown-menu" id="user-drop">
+                  <li>
+                    <a href="#" class="DN" data-toggle="modal" data-target="#form1">
+                      <i class="fa fa-user-circle"></i> Đăng nhập
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="DK" data-toggle="modal" data-target="#form2">
+                      <i class="fa fa-plus"></i> Đăng ký
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--Menu San pham-->
+    <section class="navigation-menu ">
+      <div class="container-fluid ">
+        <div class="row ">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top ">
+              <button class="hamburger hamburger--emphatic" type="button" data-toggle="collapse"
+                data-target="#main_nav">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" data-toggle="dropdown">
+                      <span><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                      <span>Điện thoại</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"> IPhone </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> SamSung </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                      <li><a class="dropdown-item" href="#"> Huawei </a>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" data-toggle="dropdown">
+                      <span><i class="fa fa-tablet" aria-hidden="true"></i></span>
+                      <span>Tablet</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"> IPhone </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> SamSung </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                      <li><a class="dropdown-item" href="#"> Huawei </a>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" data-toggle="dropdown">
+                      <span><i class="fa fa-laptop" aria-hidden="true"></i></span>
+                      <span>Laptop</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"> IPhone </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> SamSung </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                      <li><a class="dropdown-item" href="#"> Huawei </a>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">
+                      <span><i class="fa fa-headphones" aria-hidden="true" data-toggle="dropdown"></i></span>
+                      <span>Phụ kiện</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"> IPhone </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> SamSung </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                      <li><a class="dropdown-item" href="#"> Huawei </a>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#">
+                      <span><i class="fa fa-clock" aria-hidden="true" data-toggle="dropdown"></i></span>
+                      <span>Đồng hồ</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"> IPhone </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> SamSung </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                      <li><a class="dropdown-item" href="#"> Huawei </a>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- navbar-collapse.// -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Form Dang nhap-->
+    <div class="modal fade" id="form1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h3 class="modal-title" id="exampleModalLabel" style="text-align: center; text-shadow: 0 0 blue;">Đăng Nhập
+            </h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form name="modal-form" action="" onsubmit="validateForm1()">
+            <div class="modal-body">
+              <div class="form-group">
+                <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
+                <input type="text" id="account" name="account" class="form-control" placeholder="tài khoản..." required>
+
+              </div>
+              <div class="form-group">
+                <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
+                <input type="password" class="form-control" id="name1" placeholder="...... " required>
+              </div>
+            </div>
+            <div class="modal-footer border-top-0 d-flex justify-content-center">
+              <button type="submit" class="btn btn-success">Xác nhận</button>
+              <button type="reset" class="btn btn-success">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Form Dang ky-->
+    <div class="modal fade" id="form2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h3 class="modal-title" id="exampleModalLabel" style="text-shadow: 0 0 blue; text-align: center;">Đăng Ký
+              Tài Khoản</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form name="modal-form" action="" onsubmit="validateForm1()">
+            <div class="modal-body">
+              <div class="form-group">
+                <span style="width: 20px;"><i class="fas fa-users"> </i> Họ và tên</span>
+                <input type="text" id="account" name="account" class="form-control" placeholder="Họ tên..." required
+                  pattern=".{08,}" title="08 or more characters">
+                <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
+                  mật.</small>
+              </div>
+              <div class="form-group">
+                <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
+                <input type="text" id="account" name="account" class="form-control" placeholder="tài khoản..." required
+                  pattern=".{08,}" title="08 or more characters">
+
+              </div>
+              <div class="form-group">
+                <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
+                <input type="password" class="form-control" id="name1" placeholder="....." required pattern=".{08,}"
+                  title="08 or more characters">
+              </div>
+              <div class="form-group">
+                <label for="sdt"><i class="fas fa-phone"></i>Số điện thoại</label>
+                <input type="text" class="form-control" id="sdt" placeholder="SĐT" required pattern=".{02,}"
+                  title=" nhập đủ số điện thoại">
+              </div>
+              <div class="form-group">
+                <span style="width: 20px;"><i class="fab fa-mailchimp"></i> Email</span>
+                <input type="email" id="account" name="account" class="form-control" placeholder="...@gmail.com"
+                  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Vui lòng nhập đúng định dạng mail!">
+                <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
+                  mật.</small>
+              </div>
+
+
+            </div>
+            <div class="modal-footer border-top-0 d-flex justify-content-center">
+              <button type="submit" class="btn btn-success">Xác nhận</button>
+              <button type="reset" class="btn btn-success"><i class="fas fa-trash-alt"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page Content -->
+  <div class="container all" style="margin-bottom: 150px;">
+
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1" style="overflow-x: auto;">
+        <h3 class="mt-4 mb-4">Danh sách sản phẩm</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Sản phẩm</th>
+              <th>SL</th>
+              <th class="text-center">Giá</th>
+              <th class="text-center">Tổng tiền</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody id="cart-items">
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><a href="javascript:;" class="btn btn-danger" data-cesta-feira-clear-basket>Xóa tất cả</a>
+                <a href="#" class="btn btnThanhToan">Thanh toán</a>
+              </td>
+              <td></td>
+              <td>Tổng tiền</td>
+              <td class="text-right" id="total-value"><strong>0đ</strong></td>
+              <td>  </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container bottom_border">
+      <div class="row">
+        <div class=" col-md-4">
+          <!--Tên công ty-->
+          <span class="footer-title">
+            <h5>Công ty Nguyễn Nhật Huy</h5>
+          </span>
+          <p><i class="fa fa-location-arrow"></i> Quận 1, Thành Phố Hồ Chí Minh. </p>
+          <p><i class="fa fa-phone"></i> 0123456789 </p>
+          <p><i class="fa fa fa-envelope"></i> apple@gmail.com </p>
+        </div>
+        <div class=" col-md-4">
+          <!--Hỗ trợ khách hàng-->
+          <span class="footer-title">
+            <h5>Hỗ trợ khách hàng</h5>
+          </span>
+          <ul class="footer_HTKH">
+            <li><a href="#">Thông tin bảo hành</a></li>
+            <li><a href="#">Quy định về việc sửa chữa sản phẩm</a></li>
+            <li><a href="#">Phương thức thanh toán</a></li>
+            <li><a href="#">Trả góp</a></li>
+          </ul>
+        </div>
+        <div class=" col-md-4">
+          <!--Thông tin-->
+          <span class="footer-title">
+            <h5>Thông tin</h5>
+          </span>
+          <ul class="footer_HTKH">
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="#">Thông tin liên hệ</a></li>
+            <li><a href="gopYKhieNai.html">Góp ý - khiếu nại</a></li>
+            <li><a href="#">Giờ làm việc</a></li>
+          </ul>
+        </div>
+        <!--Mạng xã hội-->
+        <div class="container-fluid">
+          <ul class="social_footer">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <!--Copyright-->
+        <div class="container-fluid">
+          <p class=" text-center mt-4">Copyright @2020 | Designed With by <a href="#">....</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+  <script type="text/javascript" src="js/javaScript.js"></script>
+  <script type="text/javascript" src="js/GioHang.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <script type="application/javascript">
+
+    function initListaOrcamento() {
+      var products = $.CestaFeira({
+        debug: true
+      }).getItems(),
+        totalValueTemp = 0,
+        $cartItems = $('#cart-items');
+
+      if (!products) {
+        console.log("No items in cart!");
+        return;
+      }
+
+      function updateTotalValue() {
+
+        var totalValue = 0;
+
+        $.each($('[data-item-total-value]'), function (index, item) {
+          totalValue += $(item).data('item-total-value');
+        });
+
+        $('#total-value').html(parseFloat(totalValue).toLocaleString() + "đ");
+      }
+
+      function mountLayout(index, data) {
+        var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
+
+        var $layout = "<tr id='product-" + index + "'><td class='col-sm-8 col-md-8'><div class='media'>" +
+          "<img class='d-flex img-fluid align-self-center hinhSP' src='img/SP-Detail/info-product-" + index + ".png'>" +
+          "<div class='media-body'>" +
+          "<p class='mt-2'>" + data.product_name + "</p>" +
+          "</div></div></td><td class='col-sm-1 col-md-1' style='text-align: center;'>" + data.quantity +
+          "<td class='col-sm-1 col-md-1 text-center' ><strong>" + parseFloat(data.unity_price).toLocaleString() + "đ</strong></td>" +
+          "<td class='col-sm-1 col-md-1 text-center' data-item-total-value='" + totalValueTemp + "'><strong>" + parseFloat(totalValueTemp).toLocaleString() + "đ</strong></td>" +
+          "<td class='col-sm-1 col-md-1'>" +
+          "<a href='javascript:;' class='btn btn-danger fas fa-trash-alt' data-cesta-feira-delete-item='" + index + "'><span class='sr-only'>Remove</span></a>" +
+          "</td></tr>";
+
+        $cartItems.append($layout);
+      }
+
+
+      $.each(products, function (index, value) {
+        mountLayout(index, value);
+      });
+
+      updateTotalValue();
+
+      $(document).on('click', 'a[data-cesta-feira-delete-item]', function (e) {
+        e.preventDefault();
+
+        var productId = $(this).data('cesta-feira-delete-item');
+
+        if ($(document).on('cesta-feira-item-deleted')) {
+          $('#product-' + productId).fadeOut(500, function () {
+            $(this).remove();
+            updateTotalValue();
+          });
+        }
+      });
+
+      $(document).on('cesta-feira-clear-basket', function (e) {
+        $('#cart-items tr').each(function (index, value) {
+          $(value).fadeOut(500, function () {
+            $(this).remove();
+            updateTotalValue();
+          });
+        });
+      });
+
+    }
+
+    $(document).ready(function () {
+
+      initListaOrcamento();
+
+    });
+  </script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+
+</html>

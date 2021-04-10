@@ -39,9 +39,11 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search...">
                                     <div class="input-group-append">
-                                        <button class="btn btn-secondary" type="button">
+                                        <button class="btn btn-secondary" type="button" ng-model="data">
                                             <i class="fa fa-search"></i>
+
                                         </button>
+
                                     </div>
                                 </div>
                             </div>
@@ -49,15 +51,42 @@
                         <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
 
                             <div class="card-header">
-                                <a class="nav-link cart-item-count" href="../HTML2020/TEST2/cart.html"
-                                    data-cesta-feira-items-count>
+                                <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count>
                                     <span class="fa fa-shopping-cart"></span>
                                 </a>
                                 <div class="card-header-top-box">
                                     <div class="cart-empty">
                                         Giỏ hàng chưa có sản phẩm
                                     </div>
-
+                                    <div class="container-fluid cartProducts"
+                                        style="margin-bottom: 0px; z-index: 99999;">
+                                        <div class="row">
+                                            <div class="">
+                                                <table class="table" border="0" style="width:97%; margin-left: 4px;">
+                                                    <thead>
+                                                    </thead>
+                                                    <tbody id="cart-items">
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="2"
+                                                                style="border-top: none; font-weight: bold; font-size: 17px; padding-top: 20px;">
+                                                                Tổng tiền <p id="total-value"
+                                                                    style="display: inline; margin-left: 10px">0đ
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2"><a href="javascript:;"
+                                                                    class="btn btn-danger mr-5">Xem giỏ hàng</a><a
+                                                                    href="#" class="btn btnThanhToan">Thanh toán</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="user-login">
@@ -65,14 +94,14 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="fa fa-user" aria-hidden="true"></i>
                                     </a>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" id="user-drop">
                                         <li>
                                             <a href="#" class="DN" data-toggle="modal" data-target="#form1">
                                                 <i class="fa fa-user-circle"></i> Đăng nhập
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="DK" data-toggle="modal" data-target="#form">
+                                            <a href="#" class="DK" data-toggle="modal" data-target="#form2">
                                                 <i class="fa fa-plus"></i> Đăng ký
                                             </a>
                                         </li>
@@ -106,25 +135,12 @@
                                                 <span>Điện thoại</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -133,25 +149,12 @@
                                                 <span>Tablet</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -160,23 +163,12 @@
                                                 <span>Laptop</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -186,25 +178,12 @@
                                                 <span>Phụ kiện</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -214,161 +193,161 @@
                                                 <span>Đồng hồ</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                     </ul>
-                                </div> <!-- navbar-collapse.// -->
+                                </div>
+                                <!-- navbar-collapse.// -->
                             </nav>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
-        <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <h3 class="modal-title" id="exampleModalLabel"
-                            style="text-shadow: 0 0 blue; text-align: center;">Đăng Ký Tài Khoản</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+            <!--Form Dang nhap-->
+            <div class="modal fade" id="form1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <h3 class="modal-title" id="exampleModalLabel"
+                                style="text-align: center; text-shadow: 0 0 blue;">Đăng Nhập</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form name="modal-form" action="" onsubmit="validateForm1()">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
+                                    <input type="text" id="account" name="account" class="form-control"
+                                        placeholder="tài khoản..." required>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
+                                    <input type="password" class="form-control" id="name1" placeholder="...... "
+                                        required>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success">Xác nhận</button>
+                                <button type="reset" class="btn btn-success">Cancel</button>
+                            </div>
+                        </form>
                     </div>
-                    <form name="modal-form" action="" onsubmit="validateForm1()">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <span style="width: 20px;"><i class="fas fa-users"> </i> Họ và tên</span>
-                                <input type="text" id="account" name="account" class="form-control"
-                                    placeholder="Họ tên..." required pattern=".{08,}" title="08 or more characters">
-                                <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
-                                    mật.</small>
-                            </div>
-                            <div class="form-group">
-                                <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
-                                <input type="text" id="account" name="account" class="form-control"
-                                    placeholder="tài khoản..." required pattern=".{08,}" title="08 or more characters">
-
-                            </div>
-                            <div class="form-group">
-                                <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
-                                <input type="password" class="form-control" id="name1" placeholder="....." required
-                                    pattern=".{08,}" title="08 or more characters">
-                            </div>
-                            <div class="form-group">
-                                <label for="sdt"><i class="fas fa-phone"></i>Số điện thoại</label>
-                                <input type="text" class="form-control" id="sdt" placeholder="SĐT" required
-                                    pattern=".{02,}" title=" nhập đủ số điện thoại">
-                            </div>
-                            <div class="form-group">
-                                <span style="width: 20px;"><i class="fab fa-mailchimp"></i> Email</span>
-                                <input type="email" id="account" name="account" class="form-control"
-                                    placeholder="...@gmail.com" required
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                    title="Vui lòng nhập đúng định dạng mail!">
-                                <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
-                                    mật.</small>
-                            </div>
-
-
+                </div>
+            </div>
+            <!--Form Dang ky-->
+            <div class="modal fade" id="form2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <h3 class="modal-title" id="exampleModalLabel"
+                                style="text-shadow: 0 0 blue; text-align: center;">Đăng Ký Tài Khoản</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="modal-footer border-top-0 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success">Xác nhận</button>
-                            <button type="reset" class="btn btn-success"><i class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </form>
+                        <form name="modal-form" action="" onsubmit="validateForm1()">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fas fa-users"> </i> Họ và tên</span>
+                                    <input type="text" id="account" name="account" class="form-control"
+                                        placeholder="Họ tên..." required pattern=".{08,}" title="08 or more characters">
+                                    <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
+                                        mật.</small>
+                                </div>
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
+                                    <input type="text" id="account" name="account" class="form-control"
+                                        placeholder="tài khoản..." required pattern=".{08,}"
+                                        title="08 or more characters">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
+                                    <input type="password" class="form-control" id="name1" placeholder="....." required
+                                        pattern=".{08,}" title="08 or more characters">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sdt"><i class="fas fa-phone"></i>Số điện thoại</label>
+                                    <input type="text" class="form-control" id="sdt" placeholder="SĐT" required
+                                        pattern=".{02,}" title=" nhập đủ số điện thoại">
+                                </div>
+                                <div class="form-group">
+                                    <span style="width: 20px;"><i class="fab fa-mailchimp"></i> Email</span>
+                                    <input type="email" id="account" name="account" class="form-control"
+                                        placeholder="...@gmail.com" required
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                        title="Vui lòng nhập đúng định dạng mail!">
+                                    <small id="emailHelp" class="form-text text-muted">Thông tin của bạn sẽ được bảo
+                                        mật.</small>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success">Xác nhận</button>
+                                <button type="reset" class="btn btn-success"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="form1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                        <h3 class="modal-title" id="exampleModalLabel"
-                            style="text-align: center; text-shadow: 0 0 blue;">Đăng Nhập</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form name="modal-form" action="" onsubmit="validateForm1()">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <span style="width: 20px;"><i class="fas fa-user"> </i> Tài khoản</span>
-                                <input type="text" id="account" name="account" class="form-control"
-                                    placeholder="tài khoản..." required>
-
-                            </div>
-                            <div class="form-group">
-                                <label for="password"><i class="fas fa-lock"> </i> Mật khẩu</label>
-                                <input type="password" class="form-control" id="name1" placeholder="...... " required>
-                            </div>
-                        </div>
-                        <div class="modal-footer border-top-0 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success">Xác nhận</button>
-                            <button type="reset" class="btn btn-success">Cancel</button>
-                        </div>
-                    </form>
+        <div class="container all" style="margin-top: 20px;">
+            <h1 style="text-align: center;">Giới Thiệu</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h3>Sơ nét về Nhật Huy Mobile</h3>
+                    <p>&Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iusto corporis rerum quidem
+                        aperiam
+                        labore?
+                        Itaque est quo facere molestias nobis error quidem quas aperiam! Neque ut libero illum
+                        obcaecati.
+                    </p>
+                </div>
+                <div class="col-md-8 ">
+                    <img src="img/team.jpg" class="img-thumbnail" style="height: 500px; width: 800px;">
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <h1 style="text-align: center; padding-top:120px ;">Giới Thiệu</h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 ">
-                <h3>Sơ nét về Nhật Huy Mobile</h3>
-                <p>&Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iusto corporis rerum quidem aperiam
-                    labore?
-                    Itaque est quo facere molestias nobis error quidem quas aperiam! Neque ut libero illum obcaecati.
-                </p>
-            </div>
-            <div class="col-md-8 ">
-                <img src="img/team.jpg" class="img-thumbnail" style="height: 500px; width: 800px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 style="text-align: center;">Bla bla..</h2>
+                    <p>&Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magni architecto atque
+                        dolorem
+                        illo minus voluptatibus eum harum voluptatem fugiat,
+                        temporibus explicabo molestias, velit sunt cumque, aliquid repudiandae earum. Pariatur.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 style="text-align: center;">Bla bla..</h2>
+                    <p>&Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magni architecto atque
+                        dolorem
+                        illo minus voluptatibus eum harum voluptatem fugiat,
+                        temporibus explicabo molestias, velit sunt cumque, aliquid repudiandae earum. Pariatur.</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 style="text-align: center;">Bla bla..</h2>
+                    <p>&Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magni architecto atque
+                        dolorem
+                        illo minus voluptatibus eum harum voluptatem fugiat,
+                        temporibus explicabo molestias, velit sunt cumque, aliquid repudiandae earum. Pariatur.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h2 style="text-align: center;">Bla bla..</h2>
-                <p>&Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magni architecto atque dolorem
-                    illo minus voluptatibus eum harum voluptatem fugiat,
-                    temporibus explicabo molestias, velit sunt cumque, aliquid repudiandae earum. Pariatur.</p>
-            </div>
-            <div class="col-md-4">
-                <h2 style="text-align: center;">Bla bla..</h2>
-                <p>&Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magni architecto atque dolorem
-                    illo minus voluptatibus eum harum voluptatem fugiat,
-                    temporibus explicabo molestias, velit sunt cumque, aliquid repudiandae earum. Pariatur.</p>
-            </div>
-            <div class="col-md-4">
-                <h2 style="text-align: center;">Bla bla..</h2>
-                <p>&Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae magni architecto atque dolorem
-                    illo minus voluptatibus eum harum voluptatem fugiat,
-                    temporibus explicabo molestias, velit sunt cumque, aliquid repudiandae earum. Pariatur.</p>
-            </div>
+        <!-- backToTop -->
+        <div id="back-to-top" class="fixed-action-btn smooth-scroll ">
+            <a href="# " class="btn btn-primary btn-lg" role="button" title="Trở về đầu trang " data-toggle="tooltip "
+                data-placement="left "><i class="fa fa-chevron-up "></i></a>
         </div>
     </div>
     <footer class="footer">
@@ -423,27 +402,14 @@
         </div>
     </footer>
 
-    <script type="text/javascript">
-        var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
-
-        var hamburgers = document.querySelectorAll(".hamburger");
-        if (hamburgers.length > 0) {
-            forEach(hamburgers, function (hamburger) {
-                hamburger.addEventListener("click", function () {
-                    this.classList.toggle("is-active");
-                }, false);
-            });
-        }
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="js/script.js"></script>
-    <script src="jquery.convform.js"></script>
     <script type="text/javascript" src="js/javaScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+    <script type="text/javascript" src="js/GioHang.js"></script>
 </body>

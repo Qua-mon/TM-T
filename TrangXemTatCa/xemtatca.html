@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
-    <link rel="stylesheet" type="text/css" href="bstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../bstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
-
     <div class="page-home">
         <div class="header" id="header-top">
             <section class="header-content clearfix">
@@ -23,8 +22,8 @@
                 <div class="container-fluid ">
                     <div class="row">
                         <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
-                            <a href="index.html" class="logo">
-                                <img src="img/Logo/logo.png" alt="">
+                            <a href="../index.html" class="logo">
+                                <img src="../img/Logo/logo.png" alt="">
                             </a>
                         </div>
                         <div class="col-lg-5 col-sm-12 col-md-5 col-xs-12">
@@ -40,17 +39,43 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
-
                             <div class="card-header">
-                                <a class="nav-link cart-item-count" href="../HTML2020/TEST2/cart.html"
-                                    data-cesta-feira-items-count>
+                                <a class="nav-link cart-item-count" href="gioHang.html" data-cesta-feira-items-count>
                                     <span class="fa fa-shopping-cart"></span>
                                 </a>
                                 <div class="card-header-top-box">
                                     <div class="cart-empty">
                                         Giỏ hàng chưa có sản phẩm
                                     </div>
-
+                                    <div class="container-fluid cartProducts"
+                                        style="margin-bottom: 0px; z-index: 99999;">
+                                        <div class="row">
+                                            <div class="">
+                                                <table class="table" border="0" style="width:97%; margin-left: 4px;">
+                                                    <thead>
+                                                    </thead>
+                                                    <tbody id="cart-items">
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="2"
+                                                                style="border-top: none; font-weight: bold; font-size: 17px; padding-top: 20px;">
+                                                                Tổng tiền <p id="total-value"
+                                                                    style="display: inline; margin-left: 10px">0đ
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2"><a href="javascript:;"
+                                                                    class="btn btn-danger mr-5">Xem giỏ hàng</a><a
+                                                                    href="#" class="btn btnThanhToan">Thanh toán</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="user-login">
@@ -78,13 +103,12 @@
                 </div>
             </section>
 
-
             <!--Menu San pham-->
             <section class="navigation-menu ">
                 <div class="container-fluid ">
                     <div class="row ">
                         <div class="col-md-12">
-                            <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top ">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
                                 <button class="hamburger hamburger--emphatic" type="button" data-toggle="collapse"
                                     data-target="#main_nav">
                                     <span class="hamburger-box">
@@ -99,25 +123,12 @@
                                                 <span>Điện thoại</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -126,25 +137,12 @@
                                                 <span>Tablet</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -153,23 +151,12 @@
                                                 <span>Laptop</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -179,25 +166,12 @@
                                                 <span>Phụ kiện</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -207,34 +181,21 @@
                                                 <span>Đồng hồ</span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#"> A </a></li>
-                                                <li><a class="dropdown-item" href="#"> B &raquo </a>
-                                                    <ul class="submenu dropdown-menu">
-                                                        <!--Menu cap 3-->
-                                                        <li><a class="dropdown-item" href=""> B1</a></li>
-                                                        <li><a class="dropdown-item" href=""> B2</a></li>
-                                                        <li><a class="dropdown-item" href=""> B3 &raquo </a>
-                                                            <ul class="submenu dropdown-menu">
-                                                                <!--Menu cap 4-->
-                                                                <li><a class="dropdown-item" href=""> B3.1</a></li>
-                                                                <li><a class="dropdown-item" href=""> B3.2</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href=""> B4</a></li>
-                                                        <li><a class="dropdown-item" href=""> B5</a></li>
-                                                    </ul>
+                                                <li><a class="dropdown-item" href="#"> IPhone </a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="#"> C </a></li>
-                                                <li><a class="dropdown-item" href="#"> D </a>
+                                                <li><a class="dropdown-item" href="#"> SamSung </a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"> Vsmart </a></li>
+                                                <li><a class="dropdown-item" href="#"> Huawei </a>
                                             </ul>
                                         </li>
                                     </ul>
-                                </div> <!-- navbar-collapse.// -->
+                                </div>
+                                <!-- navbar-collapse.// -->
                             </nav>
                         </div>
                     </div>
                 </div>
-
             </section>
             <!--Form Dang nhap-->
             <div class="modal fade" id="form1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -330,7 +291,6 @@
             </div>
         </div>
 
-
         <div class="slideshow all col-md-12 col-sm-12">
             <div class="container-fluid">
                 <div id="hinh-banner" class="carousel slide" data-ride="carousel">
@@ -339,10 +299,10 @@
                         <li data-target="#hinh-banner" data-slide-to="1"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active"><img src="img/Banner/apple-update-release-important.jpg"
+                        <div class="carousel-item active"><img src="../img/Banner/apple-update-release-important.jpg"
                                 class="img-fluid"></div>
                         <div class="carousel-item"><img
-                                src="img/Banner/iPhone-12-is-here-and-it-is-everything-we-dreamed-off_banner.jpg"
+                                src="../img/Banner/iPhone-12-is-here-and-it-is-everything-we-dreamed-off_banner.jpg"
                                 class="img-fluid"></div>
                     </div>
                     <a class="carousel-control-prev" href="#hinh-banner" role="button" data-slide="prev">
@@ -361,13 +321,11 @@
             <div class="container">
 
                 <header class="section-heading">
-                    <!-- <a href="#" class="btn btn-outline-primary float-right">See all</a> -->
                     <h3 class="section-title">Hãng A</h3>
                 </header><!-- sect-heading -->
 
-
                 <div class="row sp">
-                    <div class="col-md-3 col-xs-12 col-sm-6">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -375,14 +333,14 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
                             <div class="card-footer">Giá:</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -390,14 +348,14 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
                             <div class="card-footer">Giá:</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -405,14 +363,14 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
                             <div class="card-footer">Giá:</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -420,7 +378,7 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
@@ -429,7 +387,7 @@
                     </div>
 
                     <!---->
-                    <div class="col-md-3 col-xs-12 col-sm-6 xemTatCa">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -437,14 +395,14 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
                             <div class="card-footer">Giá:</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6 xemTatCa">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -452,14 +410,14 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
                             <div class="card-footer">Giá:</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6 xemTatCa">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -467,14 +425,14 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
                             <div class="card-footer">Giá:</div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-xs-12 col-sm-6 xemTatCa">
+                    <div class="col-md-3 col-xs-12 col-sm-6 mt-4">
                         <div class="card">
                             <div class="card-header">
                                 <div class="pop-up xemTatCa">
@@ -482,7 +440,7 @@
                                     <abbr title="Thêm vào giỏ hàng"><button class="btn btn-info nutDatHang">Đặt
                                             hàng</button></abbr>
                                 </div>
-                                <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                <img src="../img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">Tên Sản Phẩm:</div>
@@ -514,7 +472,197 @@
             </ul>
         </nav>
     </div>
+    <div>
+        <div class="chatIcon" id="hinhanh">
+            <img src="../img/chatIcon.png" aria-hidden="true" class="img-fluid" id="hinhanh"
+                style="width: 180px; padding-left: 22px;" alt="">
+        </div>
+        <div class="chat">
+            <div class="chat-boxx">
+                <div class="chat-empty">
+                    bạn muốn chat với chúng tôi ?
+                </div>
+            </div>
+        </div>
+        <div class="chatBox">
+            <form action="" method="GET" class="hidden">
+                <div class="conv-form-wrapper">
+                    <select name="programmer" data-conv-question="bạn muốn được tư vấn về sản phẩm của chúng tôi ?">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <div data-conv-fork="programmer">
+                        <div data-conv-case="yes">
+                            <input type="text" data-conv-question="Chào bạn." data-no-answer="true">
+                            <select name="programmer" data-conv-question="tôi có thể giúp được gì không ??">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                            <!--repply-->
+                            <div data-conv-fork="programmer">
+                                <div data-conv-case="yes">
+                                    <input type="text" data-conv-question="bạn có thể hỏi tôi mọi thứ "
+                                        data-no-answer="true">
+                                    <select name="programmer" data-conv-question="bạn muốn chiếc laptop loại nào ??">
+                                        <option value="gaming">Gaming</option>
+                                        <option value="văn phòng">Văn phòng</option>
+                                    </select>
+                                    <div data-conv-fork="programmer">
+                                        <div data-conv-case="gaming">
+                                            <input type="text" data-conv-question="chúng tôi có các dòng sau"
+                                                data-no-answer="true">
+                                            <select name="programmer" data-conv-question="Asus Acer Legion">
+                                                <option value="Asus">Asus</a></option>
+                                                <option value="Acer">Acer</option>
+                                                <option value="Legion">Legion</option>
+                                            </select>
+                                            <!--repply gaming-->
+                                            <div data-conv-fork="programmer">
+                                                <div data-conv-case="Asus">
+                                                    <input type="text"
+                                                        data-conv-question="chúng tôi hiện có các sản phẩm sau"
+                                                        data-no-answer="true">
+                                                    <select name="programmer" data-conv-question="cùng tìm hiểu nha">
+                                                        <option value="yes">Đi tới sản phẩm </option>
+                                                        <option value="no">không cảm ơn</option>
+                                                    </select>
+                                                    <div data-conv-fork="programmer">
+                                                        <div data-conv-case="yes">
+                                                            <input type="text"
+                                                                data-conv-question="chúng tôi có các dòng sau"
+                                                                data-no-answer="true">
+                                                            <select name="programmer" data-conv-question="Asus ">
+                                                                <option value="Asus">go to Asus product<a
+                                                                        href="chitiet.html"></a></option>
 
+                                                            </select>
+
+                                                        </div>
+                                                        <div data-conv-case="no">
+                                                            <select name="thought"
+                                                                data-conv-question="một ngày tốt lành nhé">
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No..</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-conv-case="no">
+                                                    <select name="thought"
+                                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No..</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div data-conv-fork="programmer">
+                                                <div data-conv-case="Acer">
+                                                    <input type="text"
+                                                        data-conv-question="chúng tôi hiện có các sản phẩm sau"
+                                                        data-no-answer="true">
+                                                    <select name="programmer" data-conv-question="cùng tìm hiểu nha">
+                                                        <option value="yes">Đi tới sản phẩm </option>
+                                                        <option value="no">không cảm ơn</option>
+                                                    </select>
+                                                    <div data-conv-fork="programmer">
+                                                        <div data-conv-case="yes">
+                                                            <input type="text"
+                                                                data-conv-question="chúng tôi có các dòng sau"
+                                                                data-no-answer="true">
+                                                            <select name="programmer" data-conv-question="Acer ">
+
+                                                                <option value="Acer">go to Acer product<a
+                                                                        href="chitiet.html"></a></option>
+
+                                                            </select>
+
+                                                        </div>
+                                                        <div data-conv-case="no">
+                                                            <select name="thought"
+                                                                data-conv-question="một ngày tốt lành nhé">
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No..</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-conv-case="no">
+                                                    <select name="thought"
+                                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No..</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div data-conv-fork="programmer">
+                                                <div data-conv-case="Legion">
+                                                    <input type="text"
+                                                        data-conv-question="chúng tôi hiện có các sản phẩm sau"
+                                                        data-no-answer="true">
+                                                    <select name="programmer" data-conv-question="cùng tìm hiểu nha">
+                                                        <option value="yes">Đi tới sản phẩm</option>
+                                                        <option value="no">không cảm ơn</option>
+                                                    </select>
+                                                    <div data-conv-fork="programmer">
+                                                        <div data-conv-case="yes">
+                                                            <input type="text"
+                                                                data-conv-question="chúng tôi có các dòng sau"
+                                                                data-no-answer="true">
+
+                                                            <select name="programmer" data-conv-question="Legion ">
+
+                                                                <option value="Legion" id="legion">go to Legion
+                                                                    product
+                                                                </option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div data-conv-case="no">
+                                                            <select name="thought"
+                                                                data-conv-question="một ngày tốt lành nhé">
+                                                                <option value="yes">Yes</option>
+                                                                <option value="no">No..</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-conv-case="no">
+                                                    <select name="thought"
+                                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No..</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-conv-case="văn phòng">
+                                            <select name="thought" data-conv-question="chúng mình đã hết hàng!">
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No..</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-conv-case="no">
+                                    <select name="thought"
+                                        data-conv-question="vậy chúc bạn 1 ngày vui vẻ khi mua hàng ở trang cuả chúng tôi nhé">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No..</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-conv-case="no">
+                            <select name="thought" data-conv-question="rất vui khi được nói chuyện với bạn!">
+
+                            </select>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
     <footer class="footer" style="margin-top: 100px;">
         <div class="container bottom_border">
             <div class="row">
@@ -566,44 +714,21 @@
             </div>
         </div>
     </footer>
-    <!--Animation cho menu hambugers-->
-    <script type="text/javascript">
-        var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
-
-        var hamburgers = document.querySelectorAll(".hamburger");
-        if (hamburgers.length > 0) {
-            forEach(hamburgers, function (hamburger) {
-                hamburger.addEventListener("click", function () {
-                    this.classList.toggle("is-active");
-                }, false);
-            });
-        }
-    </script>
-
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var header = document.getElementById("header-top");
-        var sticky = header.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
-    </script>
+    <!--BackToTop-->
+    <div id="back-to-top" class="fixed-action-btn smooth-scroll">
+        <a href="# " class="btn btn-primary btn-lg " role="button " title="Trở về đầu trang " data-toggle="tooltip "
+            data-placement="left "><i class="fa fa-chevron-up "></i></a>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/javaScript.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/javaScript.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
-    <script type="text/javascript" src="js/GioHang.js"></script>
+    <script type="text/javascript" src="../js/GioHang.js"></script>
 
 </body>
 

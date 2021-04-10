@@ -1,4 +1,5 @@
 /* Menu */
+
 * {
     margin: 0;
     padding: 0;
@@ -123,7 +124,6 @@ ul.dropdown-menu.show {
     .social_footer {
         margin-left: 20%;
     }
-
 }
 
 @media only screen and (max-width: 800px) and (min-width: 600px) {
@@ -131,6 +131,7 @@ ul.dropdown-menu.show {
         margin-left: 30%;
     }
 }
+
 @media (max-width: 800px) {
     .user-login {
         position: absolute;
@@ -188,6 +189,37 @@ ul.dropdown-menu.show {
     }
 }
 
+/* Css gio hang */
+.card{
+    height: 100%;
+  }
+  .card-footer{
+    background-color: #fff;
+  }
+  .cart-item-count {
+    position: relative;
+  }
+  
+  .cesta-feira__num-items{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #D80000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -2px;
+    right: -1px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+.table th, .table td
+{
+    border-top: none !important;
+}
 
 /*Định dạng hambuger*/
 
@@ -205,9 +237,12 @@ ul.dropdown-menu.show {
 nav ul.dropdown-menu {
     margin-left: 80px;
 }
-.sticky-top{
+
+.sticky-top {
     z-index: 998 !important;
 }
+
+
 /*-------------Duc's CSS-------------*/
 
 #col-1st {
@@ -217,12 +252,12 @@ nav ul.dropdown-menu {
 #col-2nd {
     margin-top: 20px;
     font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+    background-color: #9fdd8d;
 }
 
 #row2-2 {
     margin-top: 10px;
 }
-
 
 .footer {
     background-color: #263238;
@@ -292,6 +327,8 @@ ul.footer_HTKH li a {
     height: 50px;
     padding-left: 10px;
 }
+
+
 /* backToTop */
 
 #back-to-top {
@@ -311,6 +348,14 @@ ul.footer_HTKH li a {
     color: #000;
 }
 
+.btnThanhToan {
+    background-color: #A8CF45;
+    color: #fff;
+}
+.btnThanhToan:hover{
+    background-color: #608010;
+    color: #fff;
+}
 
 /*----------------View detail---------------------*/
 
@@ -328,6 +373,7 @@ ul.footer_HTKH li a {
 
 .more {
     display: none;
+    text-decoration: none;
 }
 
 .readmore {
@@ -335,18 +381,35 @@ ul.footer_HTKH li a {
     border: none;
 }
 
-.product-detail button {
+.product-detail #btnxemchitiet {
     width: 20%;
-    transition-duration: 0.5s;
+    border: none;
     background-color: inherit;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.product-detail button:hover {
-    background-color: blue;
+.product-detail #btnxemchitiet:hover {
+    background-color: rgb(101, 240, 108);
 }
 
-.product-detail button:focus {
+.product-detail #btnxemchitiet:focus {
+    border: none;
+    outline: none;
+}
+
+.product-detail #btnxemcauhinh {
+    border: none;
+    background-color: inherit;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.product-detail #btnxemcauhinh:hover {
+    background-color: rgb(106, 216, 152);
+}
+
+.product-detail #btnxemcauhinh:focus {
     border: none;
     outline: none;
 }
@@ -388,4 +451,274 @@ ul.footer_HTKH li a {
 
 .footer #card2 {
     background-color: blue;
+}
+
+.product-detail .list-detail {
+    list-style-type: none;
+}
+
+.product-detail .list-detail .detail-left {
+    width: 40%;
+    display: table-cell;
+    font-weight: bold;
+}
+
+.product-detail .list-detail .detail-right {
+    width: auto;
+    display: table-cell;
+}
+
+.product-detail .list-modal-detail {
+    list-style-type: none;
+}
+
+.product-detail .list-modal-detail .detail-left {
+    width: 55%;
+    display: table-cell;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.product-detail .list-modal-detail .detail-right {
+    width: 45%;
+    display: table-cell;
+    padding-top: 10px;
+}
+
+.product-detail table {
+    width: 100%;
+}
+
+.product-detail #cauhinh1 p {
+    background-color: #a1c959;
+    border-radius: 5px;
+}
+
+.product-detail #cauhinh1 label {
+    color: rgb(221, 75, 64);
+    font-weight: bold;
+}
+
+
+/*-------------------CSS Payment----------------------*/
+
+.payment #row-pay-2 .vertical-line {
+    border-left: 3px solid black;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.payment #row-pay-2 .first input {
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: #e5f8b9;
+}
+/* update */
+.comboGift:hover{
+    transform: scale(1.1);
+    color: rgb(223, 12, 12);
+    -ms-zoom-animation: initial;
+    background-color: #74e2a6;
+    font-weight: bold;
+}
+.title a {
+    position: absolute;
+    top: -25px;
+    display: block;
+    background-image: linear-gradient(to right top, #fae939, #ffca1c, #ffab0b, #ff8a12, #fc6721);
+    padding: 10px 10px;
+    border-radius: 50px;
+    color: #fafafa;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+@media(min-width:800px) {
+    /* Thêm css sticky */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .sticky+.all {
+        padding-top: 150px;
+    }
+    .title a {
+        left: 44%;
+    }
+}
+.sanphamtuongtu {
+    width: 100%;
+    height: 33%;
+    margin-top: 50px;
+    left: 15px;
+    right: 15px;
+}
+
+.gach-ngang {
+    border-top: 1px solid #d0d0d0;
+    position: relative;
+    margin-bottom: 10px;
+}
+.comboImage:hover{
+    transform: scale(1.1);
+    color: rgb(223, 12, 12);
+    -ms-zoom-animation: initial;
+    
+    
+}
+.chatIcon {
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    font-size: 80px;
+    color: rgb(230, 18, 18);
+    cursor: pointer;
+    z-index: 99999999999999999999999999;
+    cursor: pointer;
+    animation-duration: 0.01s;
+    /* -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite; */
+}
+
+.chatBox {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 400px;
+    height: 75vh;
+    background-color: #74e042;
+    z-index: 9999999;
+    transition: all 0.3s ease-out;
+    transform: scaleY(0);
+}
+
+.chatBox.active {
+    transform: scaleY(1);
+}
+
+.chat-boxx {
+    position: fixed;
+    width: 260px;
+    box-shadow: 0 0 10px #000000;
+    transform: translate(0px, 20px);
+    transition: opacity 0.5s ease-in-out 0s;
+    z-index: 999900;
+    right: -1px;
+    opacity: 0;
+    visibility: hidden;
+    right: 42px;
+    bottom: 45px;
+    margin-right: 50px;
+    border-width: 20px;
+    border-color: rgb(230, 18, 18);
+}
+
+.chat-empty {
+    padding: 8px;
+    font-size: 15px;
+}
+
+.chat-boxx::before {
+    border-style: solid;
+    border-color: transparent transparent rgb(245, 7, 7);
+    border-width: 10px;
+    position: absolute;
+    content: "";
+    border: 2px;
+    right: 38px;
+    top: -17px;
+}
+
+.chat-boxx.show {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(255, 255, 255);
+}
+
+.chat {
+    margin-top: 2px;
+    position: relative;
+    padding-bottom: 10px;
+    background: transparent;
+    border: none;
+    margin-left: 50px;
+}
+.move img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.move::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    animation: reveal 1s reverse forwards;
+    animation-delay: 0.5s;
+    transform-origin: right;
+    animation-duration: 2s;
+}
+@keyframes reveal{
+    0%{
+        transform: scaleX(0);
+    }
+    50%{
+        transform: scaleZ(0.5);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+@keyframes reveal{
+    0%{
+        transform: scaleX(0);
+    }
+    50%{
+        transform: scaleZ(0.5);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+.move h5{
+    position: absolute;
+    right: -100px;
+    bottom: 50px;
+    margin: 0;
+    padding: 10px;
+    background: rgb(212, 211, 140);
+    z-index: 2;
+    box-shadow: 0 10px 15px rgba(93, 219, 89, 0.2);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: reveal 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+.move h5::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+    animation: reveal 1s reverse forwards;
+    animation-delay: 1s;
+    transform-origin: right;
+    
+    
 }
