@@ -354,7 +354,7 @@ function initListaOrcamento() {
         var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
 
         var $layout = "<table border='0' style='border-bottom: 1px solid #C4C4C4' id='product-" + index + "'><tr style='font-size:14px'><td rowspan='3'>" + "<div class='media'>" +
-            "<img class='d-flex align-self-center img-fluid mt-4' src='../img/SP-Detail/info-product-" + index + ".png' style='width:130px'>" + "</div>" + "</td>" + "<td>" + "<div class='media-body'>" + "<a href='javascript:;' style='float:right; font-size: 10px;' class='btn btn-danger' data-cesta-feira-delete-item='" + index + "'>X<span class='sr-only'>Remove</span></a>" + "</div>" +
+            "<img class='d-flex align-self-center img-fluid mt-4' src='../../img/SP-Detail/info-product-" + index + ".png' style='width:130px'>" + "</div>" + "</td>" + "<td>" + "<div class='media-body'>" + "<a href='javascript:;' style='float:right; font-size: 10px;' class='btn btn-danger' data-cesta-feira-delete-item='" + index + "'>X<span class='sr-only'>Remove</span></a>" + "</div>" +
             "<h6 style='margin-top: 40px; margin-bottom: 0px'>" + data.product_name + "</h6>" +
             "</div>" +
             "</td></tr>" + "<tr style='font-size:14px; border-bottom: 1px solid #C4C4C4'><td >" + "<table border='0'>" + "<tr>" + "<td style='border-top:none; width:80px; text-align:center'><span style='background:#fafafa; width:32px; height:25px; display: block; margin-top:-20px; padding-top:2px; border: solid 1px #898686'>" + data.quantity + "</span></td>" + "<td style='border-top:none; width: 70%;' data-item-total-value='" + totalValueTemp + "'><strong style='display:block; margin-top:-20px'>" +
@@ -443,4 +443,30 @@ $(document).ready(function () {
             }, false);
         });
     }
+});
+
+// xem tat ca //
+$(document).ready(function () {
+    var pageItem = $(".pagination li").not(".prev,.next");
+    var prev = $(".pagination li.prev");
+    var next = $(".pagination li.next");
+
+    pageItem.click(function () {
+        pageItem.removeClass("active");
+        $(this).not(".prev,.next").addClass("active");
+        
+    });
+    next.click(function () {
+        $('li.active').removeClass('active').next().addClass('active');
+        target = $('li.active a').attr('href');
+        location.href = target;
+    });
+
+    prev.click(function () {
+        if (!$('li.active').prev().hasClass('prev')){
+            $('li.active').removeClass('active').prev().addClass('active');
+            target = $('li.active a').attr('href');
+            location.href = target;
+        }
+    });
 });
