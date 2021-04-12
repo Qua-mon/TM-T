@@ -367,7 +367,7 @@ a.xem-tat-ca {
 
 .page_control {
     display: flex;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .page_control li {
@@ -460,57 +460,6 @@ body.blockScroll {
     position: fixed;
 }
 
-
-/*nhấp nháy*/
-
-@-webkit-keyframes glowing {
-    0% {
-        color: #d38022;
-    }
-    50% {
-        color: #c91c6d;
-    }
-    100% {
-        color: #81bb24;
-    }
-}
-
-@-moz-keyframes glowing {
-    0% {
-        color: #d38022;
-    }
-    50% {
-        color: #c91c6d;
-    }
-    100% {
-        color: #81bb24;
-    }
-}
-
-@-o-keyframes glowing {
-    0% {
-        color: #d38022;
-    }
-    50% {
-        color: #c91c6d;
-    }
-    100% {
-        color: #81bb24;
-    }
-}
-
-@keyframes glowing {
-    0% {
-        color: #d38022;
-    }
-    50% {
-        color: #c91c6d;
-    }
-    100% {
-        color: #81bb24;
-    }
-}
-
 .chatIcon {
     position: fixed;
     right: 30px;
@@ -520,10 +469,6 @@ body.blockScroll {
     cursor: pointer;
     z-index: 99999999999999999999999999;
     animation-duration: 0.01s;
-    /* -webkit-animation: glowing 1500ms infinite;
-    -moz-animation: glowing 1500ms infinite;
-    -o-animation: glowing 1500ms infinite;
-    animation: glowing 1500ms infinite; */
 }
 
 .chatBox {

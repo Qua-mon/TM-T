@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
     <link rel="stylesheet" type="text/css" href="bstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="jquery.convform.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
                             <a href="index.html" class="logo">
-                                <img src="../img/Logo/logo.png" alt="">
+                                <img src="img/Logo/logo.png" alt="">
                             </a>
                         </div>
                         <div class="col-lg-5 col-sm-12 col-md-5 col-xs-12">
@@ -43,7 +43,7 @@
                         <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
 
                             <div class="card-header">
-                                <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count>
+                                <a class="nav-link cart-item-count" href="gioHang.html" data-cesta-feira-items-count>
                                     <span class="fa fa-shopping-cart"></span>
                                 </a>
                                 <div class="card-header-top-box">
@@ -53,30 +53,28 @@
                                     <div class="container-fluid cartProducts"
                                         style="margin-bottom: 0px; z-index: 99999;">
                                         <div class="row">
-                                            <div class="">
-                                                <table class="table" border="0" style="width:97%; margin-left: 4px;">
-                                                    <thead>
-                                                    </thead>
-                                                    <tbody id="cart-items">
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td colspan="2"
-                                                                style="border-top: none; font-weight: bold; font-size: 17px; padding-top: 20px;">
-                                                                Tổng tiền <p id="total-value"
-                                                                    style="display: inline; margin-left: 10px">0đ
-                                                                </p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2"><a href="javascript:;"
-                                                                    class="btn btn-danger mr-5">Xem giỏ hàng</a><a
-                                                                    href="#" class="btn btnThanhToan">Thanh toán</a>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
+                                            <table class="table" border="0" style="width:97%; margin-left: 4px;">
+                                                <thead>
+                                                </thead>
+                                                <tbody id="cart-items">
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="2"
+                                                            style="border-top: none; font-weight: bold; font-size: 17px; padding-top: 20px;">
+                                                            Tổng tiền <p id="total-value"
+                                                                style="display: inline; margin-left: 10px">0đ
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"><a href="gioHang.html"
+                                                                class="btn btn-danger mr-5">Xem giỏ hàng</a><a href="#"
+                                                                class="btn btnThanhToan">Thanh toán</a>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -321,11 +319,10 @@
         </div>
         <div class="san-pham-noi-bat ">
             <div class="container-fluid">
-
                 <abbr title="click vào để xem tất cả sản phẩm">
                     <div class="title">
                         <div class="gach-ngang">
-                            <a href="#">Sản phẩm nối bật</a>
+                            <a href="TrangXemTatCa/HangA/hangA_SP1.html">Sản phẩm nổi bật</a>
                         </div>
                     </div>
                 </abbr>
@@ -333,11 +330,11 @@
                     <div class="pagination-container-mot">
                         <div data-page="1">
                             <div class="row d-flex ml-2">
-                                <div class="col-md-3 col-xs-12 col-sm-6">
+                                <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
-                                                <a href="chitiet (1).html">Chi tiết sản phẩm</a>
+                                                <a href="TrangChiTiet/HangA/chitiet.html">Chi tiết sản phẩm</a>
                                                 <abbr title="Thêm vào giỏ hàng"><button
                                                         class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
                                             </div>
@@ -348,22 +345,7 @@
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-xs-12 col-sm-6">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="pop-up">
-                                                <a href="#">Chi tiết sản phẩm</a>
-                                                <abbr title="Thêm vào giỏ hàng"><button
-                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
-                                            </div>
-                                            <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
-                                                class="img-fluid">
-                                        </div>
-                                        <div class="card-body">Tên Sản Phẩm:</div>
-                                        <div class="card-footer">Giá:</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-12 col-sm-6">
+                                <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
@@ -378,7 +360,22 @@
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-xs-12 col-sm-6">
+                                <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="pop-up">
+                                                <a href="#">Chi tiết sản phẩm</a>
+                                                <abbr title="Thêm vào giỏ hàng"><button
+                                                        class="btn btn-info nutDatHang">Đặt hàng</button></abbr>
+                                            </div>
+                                            <img src="img/SanPham/khunglaptopwebsite_62b5b8e63b1b4bbca46205d34d2d06bf_large.webp"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="card-body">Tên Sản Phẩm:</div>
+                                        <div class="card-footer">Giá:</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
@@ -397,7 +394,7 @@
                         </div>
                         <div data-page="2" style="display:none;">
                             <div class="row d-flex ml-2">
-                                <div class="col-md-3 col-xs-12 col-sm-6">
+                                <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
@@ -412,7 +409,7 @@
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 clearfix d-none d-md-block">
+                                <div class="col-md-3 clearfix d-none d-md-block" style="margin-top: 20px;">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
@@ -427,7 +424,7 @@
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-xs-12 col-sm-6">
+                                <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
@@ -442,7 +439,7 @@
                                         <div class="card-footer">Giá:</div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-xs-12 col-sm-6">
+                                <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                     <div class="card">
                                         <div class="card-header">
                                             <div class="pop-up">
@@ -485,7 +482,7 @@
                         <div class="pagination-container-hai">
                             <div data-page="1">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -500,7 +497,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -515,7 +512,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -530,7 +527,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -549,7 +546,7 @@
                             </div>
                             <div data-page="2" style="display:none;">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -564,7 +561,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -579,7 +576,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -594,7 +591,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -639,7 +636,7 @@
                         <div class="pagination-container-ba">
                             <div data-page="1">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -654,7 +651,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -669,7 +666,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -684,7 +681,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -703,7 +700,7 @@
                             </div>
                             <div data-page="2" style="display:none;">
                                 <div class="row d-flex ml-2">
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -718,7 +715,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -733,7 +730,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -748,7 +745,7 @@
                                             <div class="card-footer">Giá:</div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12 col-sm-6">
+                                    <div class="col-md-3 col-xs-12 col-sm-6" style="margin-top: 20px;">
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="pop-up">
@@ -805,7 +802,7 @@
 
     <div>
         <div class="chatIcon" id="rung">
-            <img src="../../img/chatIcon.png" aria-hidden="true" class="img-fluid" id="hinhanh"
+            <img src="img/chatIcon.png" aria-hidden="true" class="img-fluid" id="hinhanh"
                 style="width: 180px; padding-left: 22px;" alt="">
         </div>
         <div class="chat">
@@ -1133,8 +1130,6 @@
                         </div>
                     </div>
             </form>
-
-
         </div>
     </div>
     </div>
@@ -1171,7 +1166,7 @@
                     <ul class="footer_HTKH">
                         <li><a href="about.html">Giới thiệu</a></li>
                         <li><a href=" # ">Thông tin liên hệ</a></li>
-                        <li><a href="gopYKhieNai.html">Góp ý - khiếu nại</a></li>
+                        <li><a href="gopYKhieuNai.html">Góp ý - khiếu nại</a></li>
                         <li><a href="# ">Giờ làm việc</a></li>
                     </ul>
                 </div>
@@ -1205,7 +1200,7 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/javaScript.js"></script>
-    <script src="jquery.convform.js "></script>
+    <script src="js/jquery.convform.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
     <script type="text/javascript" src="js/GioHang.js"></script>
 

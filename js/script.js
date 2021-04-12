@@ -31,10 +31,9 @@ if ($(window).width() < 992) {
 
 // Phân trang sản phẩm //
 var paginationHandler = function (a) {
-    // store pagination container so we only select it once
     var $paginationContainer = $(".pagination-container-" + a + ""),
         $pagination = $paginationContainer.find('.pagination ul');
-    // click event
+    // su kien click
     $pagination.find("li a").on('click.pageChange', function (e) {
         e.preventDefault();
 
@@ -63,7 +62,6 @@ var paginationHandler = function (a) {
                 $(this).parent('li').addClass('active');
                 $paginationContainer.find("div[data-page=" + parseInt(parentLiPage) + "]").show();
             }
-
         }
     });
 };
@@ -71,7 +69,6 @@ $(document).ready(function () {
     paginationHandler("mot");
     paginationHandler("hai");
     paginationHandler("ba");
-    // paginationHandler("ba");
     $('#page_control_mot, #page_control_hai, #page_control_ba').click(function () {
         var id = this.id;
         if (id == 'page_control_mot') {
@@ -99,82 +96,6 @@ $(document).ready(function () {
         $(this).find('.pop-up').removeClass('show-pop-up');
     });
 });
-//showform
-// $(document).ready(function(){
-//   $(".DK").click(function(){
-//     $('.formDK').addClass('show-form');
-//     $('.nenMo').addClass('hienMo');
-//     $('body').addClass('blockScroll');
-
-//   });
-//   $('.close').click(function(){
-//     $('.formDK').removeClass('show-form');
-//     $('.nenMo').removeClass('hienMo');
-//     $('body').removeClass('blockScroll');
-
-
-//   });
-// });
-// $(document).ready(function(){
-//   $(".DN").click(function(){
-//     $('.formDN').addClass('show-form');
-//     $('.nenMo').addClass('hienMo');
-//     $('body').addClass('blockScroll');
-
-//   });
-//   $('.close').click(function(){
-//     $('.formDN').removeClass('show-form');
-//     $('.nenMo').removeClass('hienMo');
-//     $('body').removeClass('blockScroll');
-//   });
-// });
-// $(document).ready(function()
-// {
-//   $('.doiForm').click(function(){
-//     $('.formDK').removeClass('show-form');
-//     $('.formDN').addClass('show-form');
-//   });
-
-// });
-// $(document).ready(function(){
-//   $('.doiForm1').click(function(){
-//     $('.formDN').removeClass('show-form');
-//     $('.formDK').addClass('show-form');
-//   });
-// });
-//kiemtraForm
-// function validateForm(){
-
-//     var u=document.getElementById("Fname").value;
-//     var p=document.getElementById("Lname").value;
-//     var q=document.getElementById("email").value;
-//     var m=document.getElementById("phone").value;
-//     var n=document.getElementById("pass").value;
-//     if(u!=" " && p!="" && q!="" && m!="" && n!="")
-//     {
-//       alert("success");
-//       return true;
-//     }
-
-//     alert("khong dc de trong!!");
-//     return false;
-
-
-// }
-// function validateFormDN(){
-
-
-//   var q=document.getElementById("email1").value;
-//   var n=document.getElementById("pass1").value;
-//   if( q!="" &&  n!="")
-//   {
-//     alert("success");
-//     return true;
-//   }alert("khong dc de trong!!");
-//   return false;
-
-
-// };
 
 $(document).ready(function () {
     $('.chatIcon').onload(function () {
@@ -293,7 +214,6 @@ $.fn.shakeit = function (obj) {
             x++;
         }, 50);
     }
-
     return $(this).each(function (i, el) {
         shake(el);
         setInterval(function () {
@@ -302,15 +222,7 @@ $.fn.shakeit = function (obj) {
     });
 }
 $("#rung").shakeit();
-var dem = 0;
-$(document).ready(function () {
-    $('#book').click(function () {
-        $('.cesta-feira__num-items').addClass('show')
-        dem++;
 
-    });
-
-});
 // Thu gon - Xem chi tiet
 $(document).ready(function () {
     $(".readmore").click(function () {
@@ -325,7 +237,7 @@ $(document).ready(function () {
 
 // Gio hang //
 function initListaOrcamento() {
-    /*alert("Them");*/
+    // kiem tra san pham co ton tai trong gio hang //
     var products = $.CestaFeira({
         debug: true
     }).getItems(),
@@ -335,11 +247,10 @@ function initListaOrcamento() {
 
     if (!products) {
         console.log("No items in cart!");
-        //return 0; // ko co sp
     }
-    //return 1; có sp
+
+    // cap nhat so luong và gia tien san pham //
     function updateTotalValue() {
-        /*alert("Update");*/ //
         var totalValue = 0;
 
         $.each($('[data-item-total-value]'), function (index, item) {
@@ -349,12 +260,17 @@ function initListaOrcamento() {
         $('#total-value').html(parseFloat(totalValue).toLocaleString() + "đ");
     }
 
+    // in layout gio hang //
     function mountLayout(index, data) {
 
         var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
-
+        
+        var t = '';
+        var loc = window.location.href;
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichvu1.html') == -1 && loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1)
+            t = '../../';
         var $layout = "<table border='0' style='border-bottom: 1px solid #C4C4C4' id='product-" + index + "'><tr style='font-size:14px'><td rowspan='3'>" + "<div class='media'>" +
-            "<img class='d-flex align-self-center img-fluid mt-4' src='../../img/SP-Detail/info-product-" + index + ".png' style='width:130px'>" + "</div>" + "</td>" + "<td>" + "<div class='media-body'>" + "<a href='javascript:;' style='float:right; font-size: 10px;' class='btn btn-danger' data-cesta-feira-delete-item='" + index + "'>X<span class='sr-only'>Remove</span></a>" + "</div>" +
+            "<img class='d-flex align-self-center img-fluid mt-4' src='" + t + "img/SP-Detail/Laptop/Lenovo/L340/info-product-" + index + ".png' style='width:130px'>" + "</div>" + "</td>" + "<td>" + "<div class='media-body'>" + "<a href='javascript:;' style='float:right; font-size: 10px;' class='btn btn-danger' data-cesta-feira-delete-item='" + index + "'>X<span class='sr-only'>Remove</span></a>" + "</div>" +
             "<h6 style='margin-top: 40px; margin-bottom: 0px'>" + data.product_name + "</h6>" +
             "</div>" +
             "</td></tr>" + "<tr style='font-size:14px; border-bottom: 1px solid #C4C4C4'><td >" + "<table border='0'>" + "<tr>" + "<td style='border-top:none; width:80px; text-align:center'><span style='background:#fafafa; width:32px; height:25px; display: block; margin-top:-20px; padding-top:2px; border: solid 1px #898686'>" + data.quantity + "</span></td>" + "<td style='border-top:none; width: 70%;' data-item-total-value='" + totalValueTemp + "'><strong style='display:block; margin-top:-20px'>" +
@@ -371,15 +287,14 @@ function initListaOrcamento() {
 
     updateTotalValue();
 
+    // su kien xoa 1 san pham //
     $(document).on('click', 'a[data-cesta-feira-delete-item]', function (e) {
         e.preventDefault();
-        //alert("Xoa Mot");// Xoa tung sp
         var productId = $(this).data('cesta-feira-delete-item');
         if ($(document).on('cesta-feira-item-deleted')) {
             $('#product-' + productId).fadeOut(500, function () {
                 $(this).remove();
                 updateTotalValue();
-
                 if ($('#cart-items tr').length == 0) // bat su kien het san pham
                 {
                     $('.cartProducts').hide();
@@ -388,14 +303,14 @@ function initListaOrcamento() {
             });
         }
     });
-
+    // su kien xoa tat ca // 
     $(document).on('cesta-feira-clear-basket', function (e) {
         // alert("Xoa ALL");//
         $('#cart-items tr').each(function (index, value) {
             $(value).fadeOut(500, function () {
                 $(this).remove();
                 updateTotalValue();
-                $('.cart-empty').show(); // 
+                $('.cart-empty').show(); 
             });
         });
     });
@@ -404,16 +319,16 @@ function initListaOrcamento() {
 
 $(document).ready(function () {
     var loc = window.location.href;
-    if (loc.indexOf('cart.html') == -1 && loc.indexOf('thanhToan.html') == -1) // ko load 2 trang cart va thanh toan
+    if (loc.indexOf('gioHang.html') == -1 && loc.indexOf('thanhToan.html') == -1) // ko load 2 trang cart va thanh toan
         initListaOrcamento();
     $('.btnAdd').click(function (event) {
-        /* Act on the event */
-        /*$(".sp").load('SanPham.html');*/
-
         initListaOrcamento();
         location.reload();
     });
-
+    $('.btnDatMua').click(function (event) {
+        initListaOrcamento();
+        location.href = "../../thanhToan.html"
+    });
 });
 
 // sticky menu //
@@ -445,16 +360,16 @@ $(document).ready(function () {
     }
 });
 
-// xem tat ca //
+// phan trang cho xem tat ca //
 $(document).ready(function () {
-    var pageItem = $(".pagination li").not(".prev,.next");
-    var prev = $(".pagination li.prev");
-    var next = $(".pagination li.next");
+    var pageItem = $(".pageXemAll .pagination li").not(".prev,.next");
+    var prev = $(".pageXemAll .pagination li.prev");
+    var next = $(".pageXemAll .pagination li.next");
 
     pageItem.click(function () {
         pageItem.removeClass("active");
         $(this).not(".prev,.next").addClass("active");
-        
+
     });
     next.click(function () {
         $('li.active').removeClass('active').next().addClass('active');
@@ -463,7 +378,7 @@ $(document).ready(function () {
     });
 
     prev.click(function () {
-        if (!$('li.active').prev().hasClass('prev')){
+        if (!$('li.active').prev().hasClass('prev')) {
             $('li.active').removeClass('active').prev().addClass('active');
             target = $('li.active a').attr('href');
             location.href = target;

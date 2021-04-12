@@ -189,18 +189,22 @@ ul.dropdown-menu.show {
     }
 }
 
+
 /* Css gio hang */
-.card{
+
+.card {
     height: 100%;
-  }
-  .card-footer{
+}
+
+.card-footer {
     background-color: #fff;
-  }
-  .cart-item-count {
+}
+
+.cart-item-count {
     position: relative;
-  }
-  
-  .cesta-feira__num-items{
+}
+
+.cesta-feira__num-items {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -214,12 +218,13 @@ ul.dropdown-menu.show {
     right: -1px;
     font-size: 12px;
     font-weight: bold;
-  }
+}
 
-.table th, .table td
-{
+.table th,
+.table td {
     border-top: none !important;
 }
+
 
 /*Định dạng hambuger*/
 
@@ -252,7 +257,6 @@ nav ul.dropdown-menu {
 #col-2nd {
     margin-top: 20px;
     font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
-    background-color: #9fdd8d;
 }
 
 #row2-2 {
@@ -352,10 +356,12 @@ ul.footer_HTKH li a {
     background-color: #A8CF45;
     color: #fff;
 }
-.btnThanhToan:hover{
+
+.btnThanhToan:hover {
     background-color: #608010;
     color: #fff;
 }
+
 
 /*----------------View detail---------------------*/
 
@@ -400,7 +406,7 @@ ul.footer_HTKH li a {
 
 .product-detail #btnxemcauhinh {
     border: none;
-    background-color: inherit;
+    background-color: #4db9e4;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -517,14 +523,18 @@ ul.footer_HTKH li a {
     height: 40px;
     background-color: #e5f8b9;
 }
+
+
 /* update */
-.comboGift:hover{
+
+.comboGift:hover {
     transform: scale(1.1);
     color: rgb(223, 12, 12);
     -ms-zoom-animation: initial;
     background-color: #74e2a6;
     font-weight: bold;
 }
+
 .title a {
     position: absolute;
     top: -25px;
@@ -536,6 +546,7 @@ ul.footer_HTKH li a {
     text-transform: uppercase;
     text-decoration: none;
 }
+
 @media(min-width:800px) {
     /* Thêm css sticky */
     .sticky {
@@ -550,6 +561,38 @@ ul.footer_HTKH li a {
         left: 44%;
     }
 }
+
+
+/*------duong ngang sptt----*/
+
+.btn-sptt #row-text {
+    justify-content: center;
+}
+
+.btn-sptt #row-text button {
+    border-radius: 50px;
+    width: 25%;
+    height: 50px;
+    border: none;
+    background-image: linear-gradient(to right top, #fae939, #ffca1c, #ffab0b, #ff8a12, #fc6721);
+    position: absolute;
+    margin-top: 25px;
+}
+
+.btn-sptt #row-text button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #f1f1f1;
+    display: block;
+}
+
+.btn-sptt #row-text #line {
+    color: black;
+}
+
+
+/*--------------------*/
+
 .sanphamtuongtu {
     width: 100%;
     height: 33%;
@@ -563,13 +606,13 @@ ul.footer_HTKH li a {
     position: relative;
     margin-bottom: 10px;
 }
-.comboImage:hover{
+
+.comboImage:hover {
     transform: scale(1.1);
     color: rgb(223, 12, 12);
     -ms-zoom-animation: initial;
-    
-    
 }
+
 .chatIcon {
     position: fixed;
     right: 30px;
@@ -580,10 +623,6 @@ ul.footer_HTKH li a {
     z-index: 99999999999999999999999999;
     cursor: pointer;
     animation-duration: 0.01s;
-    /* -webkit-animation: glowing 1500ms infinite;
-    -moz-animation: glowing 1500ms infinite;
-    -o-animation: glowing 1500ms infinite;
-    animation: glowing 1500ms infinite; */
 }
 
 .chatBox {
@@ -649,7 +688,8 @@ ul.footer_HTKH li a {
     border: none;
     margin-left: 50px;
 }
-.move img{
+
+.move img {
     position: absolute;
     top: 0;
     left: 0;
@@ -657,7 +697,8 @@ ul.footer_HTKH li a {
     height: 100%;
     object-fit: cover;
 }
-.move::before{
+
+.move::before {
     content: '';
     position: absolute;
     top: 0;
@@ -671,29 +712,32 @@ ul.footer_HTKH li a {
     transform-origin: right;
     animation-duration: 2s;
 }
-@keyframes reveal{
-    0%{
+
+@keyframes reveal {
+    0% {
         transform: scaleX(0);
     }
-    50%{
+    50% {
         transform: scaleZ(0.5);
     }
-    100%{
+    100% {
         transform: scaleX(1);
     }
 }
-@keyframes reveal{
-    0%{
+
+@keyframes reveal {
+    0% {
         transform: scaleX(0);
     }
-    50%{
+    50% {
         transform: scaleZ(0.5);
     }
-    100%{
+    100% {
         transform: scaleX(1);
     }
 }
-.move h5{
+
+.move h5 {
     position: absolute;
     right: -100px;
     bottom: 50px;
@@ -707,7 +751,8 @@ ul.footer_HTKH li a {
     animation: reveal 1s ease-in-out forwards;
     animation-delay: 1s;
 }
-.move h5::before{
+
+.move h5::before {
     content: '';
     position: absolute;
     top: 0;
@@ -719,6 +764,4 @@ ul.footer_HTKH li a {
     animation: reveal 1s reverse forwards;
     animation-delay: 1s;
     transform-origin: right;
-    
-    
 }
