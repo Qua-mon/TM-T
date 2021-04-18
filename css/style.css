@@ -122,10 +122,6 @@ ul.dropdown-menu.show {
     .social_footer {
         margin-left: 10%;
     }
-    .pageXemAll {
-        position: absolute;
-        left: 25%;
-    }
 }
 
 @media only screen and (max-width: 580px) and (min-width: 351px) {
@@ -138,10 +134,6 @@ ul.dropdown-menu.show {
     .social_footer {
         margin-left: 20%;
     }
-    .pageXemAll {
-        position: absolute;
-        left: 28%;
-    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 600px) {
@@ -153,10 +145,6 @@ ul.dropdown-menu.show {
     }
     .social_footer {
         margin-left: 30%;
-    }
-    .pageXemAll {
-        position: absolute;
-        left: 40%;
     }
 }
 
@@ -188,10 +176,6 @@ ul.dropdown-menu.show {
     }
     .social_footer {
         margin-left: 40%;
-    }
-    .pageXemAll {
-        position: absolute;
-        left: 44%;
     }
 }
 

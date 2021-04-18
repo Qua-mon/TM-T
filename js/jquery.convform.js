@@ -208,17 +208,17 @@ ConvState.prototype.answerWith = function (answerText, answerObject) {
     }
     //In lua chon //
     if (answerText === "go to Legion product")
-        location.href = "TrangXemTatCa/HangA/hangA_SP1.html";
+        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
     if (answerText === "go to Asus product")
-        location.href = "TrangXemTatCa/HangA/hangA_SP1.html";
+        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
     if (answerText === "go to Acer product")
-        location.href = "TrangXemTatCa/HangA/hangA_SP1.html";
+        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
     if (answerText === "go to Asus VP product")
-        location.href = "TrangXemTatCa/HangA/hangA_SP1.html";
+        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
     if (answerText === "go to Acer VP product")
-        location.href = "TrangXemTatCa/HangA/hangA_SP1.html";
+        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
     if (answerText === "go to Legion VP product")
-        location.href = "TrangXemTatCa/HangA/hangA_SP1.html";
+        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
     if (this.current.input.type == 'password')
         answerText = answerText.replace(/./g, '*');
     var message = $('<div class="message from">' + answerText + '</div>');

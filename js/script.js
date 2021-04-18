@@ -264,7 +264,7 @@ function initListaOrcamento() {
     function mountLayout(index, data) {
 
         var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
-        
+
         var t = '';
         var loc = window.location.href;
         if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichvu1.html') == -1 && loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1)
@@ -310,7 +310,7 @@ function initListaOrcamento() {
             $(value).fadeOut(500, function () {
                 $(this).remove();
                 updateTotalValue();
-                $('.cart-empty').show(); 
+                $('.cart-empty').show();
             });
         });
     });
@@ -359,29 +359,40 @@ $(document).ready(function () {
         });
     }
 });
-
-// phan trang cho xem tat ca //
-$(document).ready(function () {
-    var pageItem = $(".pageXemAll .pagination li").not(".prev,.next");
-    var prev = $(".pageXemAll .pagination li.prev");
-    var next = $(".pageXemAll .pagination li.next");
-
-    pageItem.click(function () {
-        pageItem.removeClass("active");
-        $(this).not(".prev,.next").addClass("active");
-
-    });
-    next.click(function () {
-        $('li.active').removeClass('active').next().addClass('active');
-        target = $('li.active a').attr('href');
-        location.href = target;
-    });
-
-    prev.click(function () {
-        if (!$('li.active').prev().hasClass('prev')) {
-            $('li.active').removeClass('active').prev().addClass('active');
-            target = $('li.active a').attr('href');
-            location.href = target;
+// Loc gia trang xem tat ca // 
+var flag = false;
+$('#loc').on('change', function () {
+    var selectVal = $("#loc option:selected").val();
+    if (selectVal == "tangDan") {
+        var sorted = $('.results-row').sort(function (a, b) {
+            return (flag ==
+                (convertToNumber($(a).find('.price').html()) <
+                    convertToNumber($(b).find('.price').html()))) ? 1 : -1;
+        });
+        flag = flag ? false : true;
+        for (var i in sorted) {
+            if (i < 8)
+                $('.t').append(sorted[i]);
+            else if (i < sorted.length)
+                $('.t2').append(sorted[i]);
         }
-    });
+    }
+    else {
+        var sorted = $('.results-row').sort(function (a, b) {
+            return (flag ==
+                (convertToNumber($(a).find('.price').html()) >
+                    convertToNumber($(b).find('.price').html()))) ? 1 : -1;
+        });
+        flag = flag ? false : true;
+        for (var i in sorted) {
+            if (i < 8)
+                $('.t').append(sorted[i]);
+            else if (i < sorted.length)
+                $('.t2').append(sorted[i]);
+        }
+    }
+    flag = false;
 });
+var convertToNumber = function (value) {
+    return parseFloat(value.replace('$', ''));
+}
