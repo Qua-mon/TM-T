@@ -272,9 +272,6 @@ function initListaOrcamento() {
             && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
             t = '../../';
 
-        // if(data.item_type == "Laptop")
-        //     var x = data.item_type;
-
         var x = data.item_type;
 
         var $layout = "<table border='0' style='border-bottom: 1px solid #C4C4C4' id='product-" + index + "'><tr style='font-size:14px'><td rowspan='3'>" + "<div class='media'>" +
