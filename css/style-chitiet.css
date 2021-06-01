@@ -225,7 +225,24 @@ ul.dropdown-menu.show {
     border-top: none !important;
 }
 
-
+.titleSP{
+    color: #000;
+}
+.titleSP:hover{
+    text-decoration: none;
+    color:#D80000;
+}
+.imgSP img:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s; 
+}
+.dsSP{
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
 /*Định dạng hambuger*/
 
 @media (min-width:967px) {

@@ -267,11 +267,19 @@ function initListaOrcamento() {
 
         var t = '';
         var loc = window.location.href;
-        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichvu1.html') == -1 && loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1)
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
+            loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
+            && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
             t = '../../';
+
+        // if(data.item_type == "Laptop")
+        //     var x = data.item_type;
+
+        var x = data.item_type;
+
         var $layout = "<table border='0' style='border-bottom: 1px solid #C4C4C4' id='product-" + index + "'><tr style='font-size:14px'><td rowspan='3'>" + "<div class='media'>" +
-            "<img class='d-flex align-self-center img-fluid mt-4' src='" + t + "img/SP-Detail/Laptop/Lenovo/L340/info-product-" + index + ".png' style='width:130px'>" + "</div>" + "</td>" + "<td>" + "<div class='media-body'>" + "<a href='javascript:;' style='float:right; font-size: 10px;' class='btn btn-danger' data-cesta-feira-delete-item='" + index + "'>X<span class='sr-only'>Remove</span></a>" + "</div>" +
-            "<h6 style='margin-top: 40px; margin-bottom: 0px'>" + data.product_name + "</h6>" +
+            "<a class='imgSP' href='#'><img class='d-flex align-self-center img-fluid mt-4' src='" + t + "img/SP-Detail/HinhGioHang/" + x + "/info-product-" + index + ".jpg'></a>" + "</div>" + "</td>" + "<td>" + "<div class='media-body'>" + "<a href='javascript:;' style='float:right; font-size: 10px;' class='btn btn-danger' data-cesta-feira-delete-item='" + index + "'>X<span class='sr-only'>Remove</span></a>" + "</div>" +
+            "<h6 style='margin-top: 40px; margin-bottom: 0px;'>" + data.product_name + "</h6>" +
             "</div>" +
             "</td></tr>" + "<tr style='font-size:14px; border-bottom: 1px solid #C4C4C4'><td >" + "<table border='0'>" + "<tr>" + "<td style='border-top:none; width:80px; text-align:center'><span style='background:#fafafa; width:32px; height:25px; display: block; margin-top:-20px; padding-top:2px; border: solid 1px #898686'>" + data.quantity + "</span></td>" + "<td style='border-top:none; width: 70%;' data-item-total-value='" + totalValueTemp + "'><strong style='display:block; margin-top:-20px'>" +
             parseFloat(totalValueTemp).toLocaleString().fontsize('3px') + "đ</strong></td>" + "</tr>" + "</table>" +
@@ -394,5 +402,8 @@ $('#loc').on('change', function () {
     flag = false;
 });
 var convertToNumber = function (value) {
-    return parseFloat(value.replace('$', ''));
+    for (var i = 0; i < value.length; i++)
+        value = value.replace('.', '');
+    return parseFloat(value.replace('đ', ''));
+    //return value;
 }
