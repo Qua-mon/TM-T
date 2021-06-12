@@ -16,7 +16,7 @@ $(document).ready(function () {
 $(document).on('click', '.dropdown-menu', function (e) {
     e.stopPropagation();
 });
-// make it as accordion for smaller screens
+// ẩn hiện submenu đối với màn hình nhỏ hơn
 if ($(window).width() < 992) {
     $('.dropdown-menu a').click(function (e) {
         e.preventDefault();
@@ -33,31 +33,31 @@ if ($(window).width() < 992) {
 var paginationHandler = function (a) {
     var $paginationContainer = $(".pagination-container-" + a + ""),
         $pagination = $paginationContainer.find('.pagination ul');
-    // su kien click
+    // sự kiện click
     $pagination.find("li a").on('click.pageChange', function (e) {
         e.preventDefault();
 
-        // get parent li's data-page attribute and current page
+        // lấy thành phần cha của this có class là li và lấy trang hiện tại
         var parentLiPage = $(this).parent('li').data("page"),
             currentPage = parseInt($(".pagination-container-" + a + " div[data-page]:visible").data('page')),
             numPages = $paginationContainer.find("div[data-page]").length;
-        // make sure they aren't clicking the current page
+        // bẫy người dùng không click vào trang hiện tại 
         if (parseInt(parentLiPage) !== parseInt(currentPage)) {
-            // hide the current page
+            // ẩn trang hiện tại
             $paginationContainer.find("div[data-page]:visible").hide();
 
             if (parentLiPage === '+') {
-                // next page
+                // chuyển trang tiếp theo
                 if (!$pagination.find('li.active').next().hasClass('next'))
                     $pagination.find('li.active').removeClass('active').next().addClass('active');
                 $paginationContainer.find("div[data-page=" + (currentPage + 1 > numPages ? numPages : currentPage + 1) + "]").show();
             } else if (parentLiPage === '-') {
-                // previous page
+                // chuyển trang trang trước
                 if (!$pagination.find('li.active').prev().hasClass('prev'))
                     $pagination.find('li.active').removeClass('active').prev().addClass('active');
                 $paginationContainer.find("div[data-page=" + (currentPage - 1 < 1 ? 1 : currentPage - 1) + "]").show();
             } else {
-                // specific page
+                // Lấy trang cụ thể mà người dùng click //
                 $pagination.find('li.active').removeClass('active');
                 $(this).parent('li').addClass('active');
                 $paginationContainer.find("div[data-page=" + parseInt(parentLiPage) + "]").show();
@@ -65,6 +65,7 @@ var paginationHandler = function (a) {
         }
     });
 };
+// sự kiện phân trang sản phẩm, có gọi hàm paginationHandler
 $(document).ready(function () {
     paginationHandler("mot");
     paginationHandler("hai");
@@ -96,7 +97,7 @@ $(document).ready(function () {
         $(this).find('.pop-up').removeClass('show-pop-up');
     });
 });
-
+// Hiện chatbox // 
 $(document).ready(function () {
     $('.chatIcon').onload(function () {
         $('.chat-boxx').addClass('show');
@@ -105,7 +106,7 @@ $(document).ready(function () {
         $('.chat-boxx').removeClass('show');
     });
 });
-
+// Ẩn chatbox //
 $(document).ready(function () {
     $('.chatIcon').click(function () {
         $('.chatBox').toggleClass('active');
@@ -124,21 +125,20 @@ function do_validate() {
 }
 
 
-// An menu dropdown, header, chatbox khi open form
+// Ẩn hiện menu dropdown, header, chatbox khi open form đăng ký, đăng nhập hoặc đóng form đăng ký, đăng nhập
 $(document).ready(function () {
-    // bat su kien dong modal form //
+    // Sự kiện khi đóng modal form //
     $('#form1').on('hidden.bs.modal', function (e) {
-        // Alert the user
         $('.chat-boxx').addClass('show');
         $('.chatIcon').show();
         $('#header-top').addClass('sticky');
     })
     $('#form2').on('hidden.bs.modal', function (e) {
-        // Alert the user
         $('.chat-boxx').addClass('show');
         $('.chatIcon').show();
         $('#header-top').addClass('sticky');
     })
+    // Sự kiện khi mở modal form // 
     $('.DN').click(function () {
         if ($('#form1').length) {
             $('.chat-boxx').removeClass('show');
@@ -154,7 +154,7 @@ $(document).ready(function () {
     })
 });
 
-// back to top //
+// Nút back to top //
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
@@ -235,21 +235,21 @@ $(document).ready(function () {
     });
 });
 
-// Gio hang //
+// Giỏ hàng //
 function initListaOrcamento() {
-    // kiem tra san pham co ton tai trong gio hang //
+    // kiểm tra sản phẩm có tồn tại trong giỏ hàng //
     var products = $.CestaFeira({
         debug: true
     }).getItems(),
         totalValueTemp = 0,
         $cartItems = $('#cart-items');
 
-
+    // Giỏ hàng chưa có sản phẩm // 
     if (!products) {
         console.log("No items in cart!");
     }
 
-    // cap nhat so luong và gia tien san pham //
+    // cập nhật số lượng và giá tiền sản phẩm //
     function updateTotalValue() {
         var totalValue = 0;
 
@@ -260,12 +260,13 @@ function initListaOrcamento() {
         $('#total-value').html(parseFloat(totalValue).toLocaleString() + "đ");
     }
 
-    // in layout gio hang //
+    // in layout giỏ hàng //
     function mountLayout(index, data) {
 
         var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
 
         var t = '';
+        // Nếu không phải là các trang như index, dịch vụ,, thanh toán,... thì thêm ../../ cho biến t
         var loc = window.location.href;
         if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
             loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
@@ -273,7 +274,7 @@ function initListaOrcamento() {
             t = '../../';
 
         var x = data.item_type;
-
+        // định dạng cho layout // 
         var $layout = "<table border='0' style='border-bottom: 1px solid #C4C4C4' id='product-" + index + "'><tr style='font-size:14px'><td rowspan='3'>" + "<div class='media'>" +
             "<a class='imgSP' href='#'><img class='d-flex align-self-center img-fluid mt-4' src='" + t + "img/SP-Detail/HinhGioHang/" + x + "/info-product-" + index + ".jpg'></a>" + "</div>" + "</td>" + "<td>" + "<div class='media-body'>" + "<a href='javascript:;' style='float:right; font-size: 10px;' class='btn btn-danger' data-cesta-feira-delete-item='" + index + "'>X<span class='sr-only'>Remove</span></a>" + "</div>" +
             "<h6 style='margin-top: 40px; margin-bottom: 0px;'>" + data.product_name + "</h6>" +
@@ -300,8 +301,9 @@ function initListaOrcamento() {
             $('#product-' + productId).fadeOut(500, function () {
                 $(this).remove();
                 updateTotalValue();
-                if ($('#cart-items tr').length == 0) // bat su kien het san pham
+                if ($('#cart-items tr').length == 0) // Bắt sự kiện khi hết sản phẩm
                 {
+                    // ẩn khung danh sách sản phẩm và hiện khung giỏ hàng chưa có sản phẩm // 
                     $('.cartProducts').hide();
                     $('.cart-empty').show();
                 }
@@ -310,7 +312,6 @@ function initListaOrcamento() {
     });
     // su kien xoa tat ca // 
     $(document).on('cesta-feira-clear-basket', function (e) {
-        // alert("Xoa ALL");//
         $('#cart-items tr').each(function (index, value) {
             $(value).fadeOut(500, function () {
                 $(this).remove();
@@ -324,12 +325,15 @@ function initListaOrcamento() {
 
 $(document).ready(function () {
     var loc = window.location.href;
-    if (loc.indexOf('gioHang.html') == -1 && loc.indexOf('thanhToan.html') == -1) // ko load 2 trang cart va thanh toan
+    // không sử dụng code giỏ hàng ở trên cho 2 trang giohang.html và thanhtoan.html //
+    if (loc.indexOf('gioHang.html') == -1 && loc.indexOf('thanhToan.html') == -1) 
         initListaOrcamento();
+    // sự kiện khi người dùng thêm giỏ hàng // 
     $('.btnAdd').click(function (event) {
         initListaOrcamento();
         location.reload();
     });
+    // sự kiện khi người dùng chọn button thanh toán // 
     $('.btnDatMua').click(function (event) {
         initListaOrcamento();
         location.href = "../../thanhToan.html"
@@ -364,10 +368,11 @@ $(document).ready(function () {
         });
     }
 });
-// Loc gia trang xem tat ca // 
+// Lọc giá tăng dần và giảm dần cho trang xem tất cả // 
 var flag = false;
 $('#loc').on('change', function () {
     var selectVal = $("#loc option:selected").val();
+    // Người dùng chọn tăng dần // 
     if (selectVal == "tangDan") {
         var sorted = $('.results-row').sort(function (a, b) {
             return (flag ==
@@ -382,6 +387,7 @@ $('#loc').on('change', function () {
                 $('.t2').append(sorted[i]);
         }
     }
+    // Người dùng chọn giảm dần // 
     else {
         var sorted = $('.results-row').sort(function (a, b) {
             return (flag ==
@@ -398,9 +404,9 @@ $('#loc').on('change', function () {
     }
     flag = false;
 });
+// Loại bỏ dấu . và chứ đ và convert sang biến float để tiến hành lọc giá // 
 var convertToNumber = function (value) {
     for (var i = 0; i < value.length; i++)
         value = value.replace('.', '');
     return parseFloat(value.replace('đ', ''));
-    //return value;
 }

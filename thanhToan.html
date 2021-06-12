@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Toán Đơn Hàng</title>
+    <link rel="shortcut icon" href="img/Logo/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
     <link rel="stylesheet" type="text/css" href="bstrap/css/bootstrap.css">
@@ -29,7 +30,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
                             <a href="index.html" class="logo">
-                                <img src="img/Logo/logo.png" alt="">
+                                <img src="img/Logo/logo.png" alt="Nhật Huy mobile">
                             </a>
                         </div>
                         <div class="col-lg-5 col-sm-12 col-md-5 col-xs-12">
@@ -346,7 +347,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Trang Chủ</a></li>
-                        <li class="breadcrumb-item"><a href="#">Thanh toán</a></li>
+                        <li class="breadcrumb-item"><a href="thanhToan.html">Thanh toán</a></li>
                     </ol>
                 </nav>
             </div>
@@ -460,7 +461,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer mt-5">
             <div class="container bottom_border">
                 <div class="row">
                     <div class=" col-md-4">
@@ -506,7 +507,7 @@
                     </div>
                     <!--Copyright-->
                     <div class="container-fluid ">
-                        <p class=" text-center mt-4 ">Copyright @2020 | Designed With by <a href="# ">....</a></p>
+                        <p class=" text-center mt-4 ">Copyright ©2021 by <a href="# ">NhatHuyMobile</a> All right reserved </p>
                     </div>
                 </div>
             </div>
@@ -524,18 +525,20 @@
         <script type="text/javascript" src="js/script.js"></script>
 
         <script type="application/javascript">
+        var tienTam = 0;
+        // kiểm tra sản phẩm có tồn tại trong giỏ hàng //
             function initListaOrcamento() {
                 var products = $.CestaFeira({
                     debug: true
                 }).getItems(),
                     totalValueTemp = 0,
                     $cartItems = $('#cart-items');
-
+                // Giỏ hàng chưa có sản phẩm // 
                 if (!products) {
                     console.log("No items in cart!");
                     return;
                 }
-
+                // cập nhật số lượng và giá tiền sản phẩm //
                 function updateTotalValue() {
 
                     var totalValue = 0;
@@ -545,6 +548,7 @@
                     });
                     $('#total-value').html(parseFloat(totalValue).toLocaleString() + "đ");
                 }
+                // Hàm tính tổng tiền, kết quả bằng tổng tiền giá sản phẩm cộng với phí vận chuyển
                 function tinhTongTien(phiVanChuyen, totalValueTemp) {
                     $('#phi-van-chuyen').html(parseFloat(phiVanChuyen).toLocaleString() + "đ");
                     $('#tongTien').html(parseFloat(phiVanChuyen + totalValueTemp).toLocaleString() + "đ");
@@ -556,7 +560,7 @@
                     var inputVal = $('input').val();
 
                     var x = data.item_type;
-
+                    // định dạng layout cho trang thanhtoan.html // 
                     var $layout = "<tr id='product-" + index + "'><td ><div class='media'>" +
                         "<img class='d-flex align-self-center hinhSP' src='img/SP-Detail/HinhGioHang/" + x + "/info-product-" + index + ".jpg'>" + "</div></td><td class=''>" +
                         "<div class='media-body'>" +
@@ -566,7 +570,8 @@
                         "</td></tr>";
                     "</tr>";
                     $cartItems.append($layout);
-                    tinhTongTien(phiVanChuyen, totalValueTemp);
+                    tienTam += totalValueTemp;
+                    tinhTongTien(phiVanChuyen, tienTam);
                 }
 
 
@@ -576,34 +581,12 @@
 
                 updateTotalValue();
 
-                $(document).on('click', 'a[data-cesta-feira-delete-item]', function (e) {
-                    e.preventDefault();
-
-                    var productId = $(this).data('cesta-feira-delete-item');
-
-                    if ($(document).on('cesta-feira-item-deleted')) {
-                        $('#product-' + productId).fadeOut(500, function () {
-                            $(this).remove();
-                            updateTotalValue();
-                        });
-                    }
-                });
-
-                $(document).on('cesta-feira-clear-basket', function (e) {
-                    $('#cart-items tr').each(function (index, value) {
-                        $(value).fadeOut(500, function () {
-                            $(this).remove();
-                            updateTotalValue();
-                        });
-                    });
-                });
-
             }
 
 
             $(document).ready(function () {
                 initListaOrcamento();
-                // //
+                // Sự kiện người dùng chọn option vận chuyển //
 
                 var giaTam;
                 $("#radioVanChuyen").click(function () {
@@ -633,20 +616,6 @@
                     }
                 });
             });
-        </script>
-        <script type="text/javascript">
-
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-36251023-1']);
-            _gaq.push(['_setDomainName', 'jqueryscript.net']);
-            _gaq.push(['_trackPageview']);
-
-            (function () {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
         </script>
 </body>
 

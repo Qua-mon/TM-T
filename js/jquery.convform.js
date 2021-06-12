@@ -26,7 +26,6 @@ ConvState.prototype.destroy = function () {
     return false;
 };
 ConvState.prototype.newState = function (options) {
-    //alert("OK");
     var input = $.extend(true, {}, {
         name: '',
         noAnswer: false,
@@ -38,7 +37,6 @@ ConvState.prototype.newState = function (options) {
         answers: []
     }, options);
     input.element = $('<input type="text" name="' + input.name + '"/>');
-    //alert(input.name);
     return new SingleConvState(input);
 };
 // Hàm chạy khi lựa chọn opton yes no //
@@ -207,18 +205,62 @@ ConvState.prototype.answerWith = function (answerText, answerObject) {
         }
     }
     //In lua chon //
-    if (answerText === "go to Legion product")
-        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
-    if (answerText === "go to Asus product")
-        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
-    if (answerText === "go to Acer product")
-        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
-    if (answerText === "go to Asus VP product")
-        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
-    if (answerText === "go to Acer VP product")
-        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
-    if (answerText === "go to Legion VP product")
-        location.href = "TrangXemTatCa/Laptop/Lenovo.html";
+    
+    // Nếu không phải là các trang như index, dịch vụ,, thanh toán,... thì thêm ../../ cho biến location.href
+    if (answerText === "go to Legion product"){
+        var loc = window.location.href;
+        var t = '';
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
+            loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
+            && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
+                t = '../../';
+        location.href = t + "TrangXemTatCa/Laptop/Lenovo.html";
+    }
+    if (answerText === "go to Asus product"){
+        var loc = window.location.href;
+        var t = '';
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
+            loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
+            && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
+                t = '../../';
+        location.href = t + "TrangXemTatCa/Laptop/Asus.html";
+    }
+    if (answerText === "go to Acer product"){
+        var loc = window.location.href;
+        var t = '';
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
+            loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
+            && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
+                t = '../../';
+        location.href = t + "TrangXemTatCa/Laptop/Acer.html";
+    }
+    if (answerText === "go to Asus VP product"){
+        var loc = window.location.href;
+        var t = '';
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
+            loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
+            && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
+                t = '../../';
+        location.href = t + "TrangXemTatCa/Laptop/Asus.html";
+    }
+    if (answerText === "go to Acer VP product"){
+        var loc = window.location.href;
+        var t = '';
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
+            loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
+            && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
+                t = '../../';
+        location.href = t + "TrangXemTatCa/Laptop/Acer.html";
+    }
+    if (answerText === "go to Legion VP product"){
+        var loc = window.location.href;
+        var t = '';
+        if (loc.indexOf('index.html') == -1 && loc.indexOf('about.html') == -1 && loc.indexOf('dichVu1.html') == -1 && loc.indexOf('thongTinLienHe.html') == -1 &&
+            loc.indexOf('dichvu2.html') == -1 && loc.indexOf('dichvu3.html') == -1 && loc.indexOf('ChinhSachDoiTra.html' == -1)
+            && loc.indexOf('GioLamViec.html') == -1 && loc.indexOf('gopYKhieuNai.html') == -1 && loc.indexOf('PTThanhToan.html') == -1)
+                t = '../../';
+        location.href = t + "TrangXemTatCa/Laptop/Lenovo.html";
+    }
     if (this.current.input.type == 'password')
         answerText = answerText.replace(/./g, '*');
     var message = $('<div class="message from">' + answerText + '</div>');

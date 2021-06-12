@@ -544,13 +544,6 @@ ul.footer_HTKH li a {
 
 /* update */
 
-.comboGift:hover {
-    transform: scale(1.1);
-    color: rgb(223, 12, 12);
-    -ms-zoom-animation: initial;
-    background-color: #74e2a6;
-    font-weight: bold;
-}
 
 .title a {
     position: absolute;
@@ -781,4 +774,14 @@ ul.footer_HTKH li a {
     animation: reveal 1s reverse forwards;
     animation-delay: 1s;
     transform-origin: right;
+}
+
+.slide-product-similar #card-slide #btnxem , .slide-product-similar-1 #card-slide #btnxem{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.slide-product-similar #card-slide #textgia , .slide-product-similar-1 #card-slide #btnxem{
+    font-style: italic;
 }

@@ -415,9 +415,9 @@ ul.footer_HTKH li a {
     display: inline;
 }
 
-.fab.fa-instagram:hover,
-.fa-twitter:hover,
-.fa-facebook-f:hover {
+.social_footer .fab.fa-instagram:hover,
+.social_footer .fa-twitter:hover,
+.social_footer .fa-facebook-f:hover {
     color: rgb(105, 105, 248);
 }
 
@@ -425,9 +425,9 @@ ul.footer_HTKH li a {
     font-size: 30px;
 }
 
-.fab.fa-instagram,
-.fa-twitter,
-.fa-facebook-f {
+.social_footer .fab.fa-instagram,
+.social_footer .fa-twitter,
+.social_footer .fa-facebook-f {
     color: #fafafa;
 }
 

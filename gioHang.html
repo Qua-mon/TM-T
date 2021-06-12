@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Giỏ hàng</title>
   <link rel="stylesheet" type="text/css" href="hamburgers-master/dist/hamburgers.css">
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="shortcut icon" href="img/Logo/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
   <link rel="stylesheet" type="text/css" href="bstrap/css/bootstrap.css">
@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
             <a href="index.html" class="logo">
-              <img src="img/Logo/logo.png" alt="">
+              <img src="img/Logo/logo.png" alt="Nhật Huy mobile">
             </a>
           </div>
           <div class="col-lg-5 col-sm-12 col-md-5 col-xs-12">
@@ -303,7 +303,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Trang Chủ</a></li>
-          <li class="breadcrumb-item"><a href="#">Chi tiết giỏ hàng</a></li>
+          <li class="breadcrumb-item"><a href="gioHang.html">Chi tiết giỏ hàng</a></li>
         </ol>
       </nav>
     </div>
@@ -391,7 +391,7 @@
             </div>
             <!--Copyright-->
             <div class="container-fluid ">
-                <p class=" text-center mt-4 ">Copyright @2020 | Designed With by <a href="# ">....</a></p>
+                <p class=" text-center mt-4 ">Copyright ©2021 by <a href="# ">NhatHuyMobile</a> All right reserved </p>
             </div>
         </div>
     </div>
@@ -410,19 +410,20 @@
   <script type="text/javascript" src="js/script.js"></script>
 
   <script type="application/javascript">
-
+    // Giỏ hàng xử lý riêng cho trang giohang.html // 
     function initListaOrcamento() {
+      // kiểm tra sản phẩm có tồn tại trong giỏ hàng //
       var products = $.CestaFeira({
         debug: true
       }).getItems(),
         totalValueTemp = 0,
         $cartItems = $('#cart-items');
-
+      // Giỏ hàng chưa có sản phẩm // 
       if (!products) {
         console.log("No items in cart!");
         return;
       }
-
+      // cập nhật số lượng và giá tiền sản phẩm //
       function updateTotalValue() {
 
         var totalValue = 0;
@@ -436,11 +437,10 @@
 
       function mountLayout(index, data) {
         var totalValueTemp = parseFloat(data.unity_price) * parseInt(data.quantity);
-        // img bỏ img-fluid // 
 
 
         var x = data.item_type;
-
+        // định dạng layout giỏ hàng cho trang giohang.html //
         var $layout = "<tr id='product-" + index + "'><td class='col-sm-8 col-md-8'><div class='media'>" +
           "<a class='imgSP' href='#'><img class='d-flex align-self-center hinhSP' src='img/SP-Detail/HinhGioHang/" + x + "/info-product-" + index + ".jpg'></a>" +
           "<div class='media-body'>" +
@@ -462,6 +462,7 @@
 
       updateTotalValue();
 
+      // su kien xoa san pham //
       $(document).on('click', 'a[data-cesta-feira-delete-item]', function (e) {
         e.preventDefault();
 
@@ -491,20 +492,6 @@
       initListaOrcamento();
 
     });
-  </script>
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36251023-1']);
-    _gaq.push(['_setDomainName', 'jqueryscript.net']);
-    _gaq.push(['_trackPageview']);
-
-    (function () {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
   </script>
 </body>
 
